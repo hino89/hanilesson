@@ -82,6 +82,10 @@
         }
 
         @media (max-width: 400px) {
+            body {
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
             .materi-buttons {
                 flex-direction: column;
                 gap: 10px;
