@@ -88,7 +88,7 @@
             opacity: 0.8;
         }
 
-        @media (max-width: 400x) {
+        @media (max-width: 400px) {
             .materi-buttons {
                 flex-direction: column;
             }
