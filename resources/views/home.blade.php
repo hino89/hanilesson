@@ -89,12 +89,14 @@
         }
 
         @media (max-width: 768px) {
+            .section {
+                overflow: hidden;
+            }
             .materi-buttons {
                 flex-direction: column;
             }
             .section img {
-                width: 180% !important;
-                clip-path: inset(0 0 0 0);
+                width: 100% !important;
                 height: auto;
                 position: absolute;
                 top: 50%;
@@ -112,7 +114,7 @@
     </div>
 
     <div class="section" id="home">
-        <img src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: -1; overflow:hidden;">
+        <img src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: -1;">
     </div>
     
     <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
