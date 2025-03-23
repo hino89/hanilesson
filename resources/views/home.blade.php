@@ -38,6 +38,10 @@
             cursor: pointer;
             text-align: center;
             transition: background 0.3s;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 
         .scroll-btn {
