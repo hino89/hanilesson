@@ -89,12 +89,14 @@
         }
 
         @media (max-width: 768px) {
+            .section {
+                overflow: hidden;
+            }
             .materi-buttons {
                 flex-direction: column;
             }
             .section img {
-                width: 200% !important;
-                max-width: none;
+                width: 180% !important;
                 height: auto;
                 position: absolute;
                 top: 50%;
