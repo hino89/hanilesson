@@ -95,10 +95,9 @@
             }
             .materi-buttons {
                 flex-direction: column;
-                gap: 10px;
             }
             .section img {
-                width: 200% !important;
+                width: 200%;
                 height: auto;
                 position: absolute;
                 top: 50%;
