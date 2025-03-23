@@ -81,7 +81,7 @@
             opacity: 0.8;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 400px) {
             .materi-buttons {
                 flex-direction: column;
                 gap: 10px;
@@ -94,8 +94,6 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
-                overflow-x: hidden;
-                overflow-y: hidden;
             }
         }
     </style>
