@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Menu</title>
+    <title>makeyoumove</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         body {
@@ -73,7 +73,7 @@
         }
         .materi-button {
             padding: 15px 30px;
-            background-color: #F0A04B;
+            background-color: #B1C29E;
             color: white;
             border: none;
             cursor: pointer;
@@ -93,13 +93,14 @@
     </div>
 
     <div class="section" id="home">
-        <h1>Home Section</h1>
-        <img src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 30%">
+        <img src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 50%">
     </div>
+    
     <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
         <h1>Tentang Section</h1>
         <button class="scroll-btn tentang" onclick="scrollToSection('home')">Back to Top</button>
     </div>
+    
     <div class="section" id="materi" style="background-color: #FADA7A;">
         <h1>Materi Section</h1>
         <div class="materi-buttons">
