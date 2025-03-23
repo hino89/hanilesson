@@ -7,8 +7,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         body {
-            background-color: #222;
-            color: white;
+            background-color: #FCE7C8;
+            color: #3E3F5B;
             font-family: Arial, sans-serif;
             margin: 0;
             overflow-x: hidden;
@@ -28,53 +28,70 @@
             transform: translateX(-50%);
             display: flex;
             gap: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
         }
         .menu-item {
             padding: 15px 30px;
-            background-color: #444;
+            color: white;
             border-radius: 10px;
             cursor: pointer;
             text-align: center;
             transition: background 0.3s;
         }
-        .menu-item:hover {
-            background-color: #666;
-        }
+
         .scroll-btn {
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #666;
             border: none;
             color: white;
             cursor: pointer;
             border-radius: 5px;
         }
         .scroll-btn:hover {
-            background-color: #888;
+            opacity: 0.8;
         }
+
+        /* Dynamic Background Colors */
+
+        
+        .menu-item.home { background-color: #FCE7C8; }
+        .menu-item.tentang { background-color: #B1C29E; }
+        .menu-item.materi { background-color: #FADA7A; }
+
+        .scroll-btn.tentang { background-color: #B1C29E; }
+        .scroll-btn.materi { background-color: #FADA7A; }
     </style>
 </head>
 <body>
-    <div class="menu">
-        <div class="menu-item" onclick="scrollToSection('tentang')">Tentang</div>
-        <div class="menu-item" onclick="scrollToSection('materi')">Materi</div>
+    <div class="menu home" id="menu">
+        <div class="menu-item home" onclick="scrollToSection('tentang')">Tentang</div>
+        <div class="menu-item home" onclick="scrollToSection('materi')">Materi</div>
     </div>
 
     <div class="section" id="home">
         <h1>Home Section</h1>
     </div>
-    <div class="section" id="tentang" style="background-color: #333;">
+    <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
         <h1>Tentang Section</h1>
-        <button class="scroll-btn" onclick="scrollToSection('home')">Back to Top</button>
+        <button class="scroll-btn tentang" onclick="scrollToSection('home')">Back to Top</button>
     </div>
-    <div class="section" id="materi" style="background-color: #444;">
+    <div class="section" id="materi" style="background-color: #FADA7A;">
         <h1>Materi Section</h1>
-        <button class="scroll-btn" onclick="scrollToSection('home')">Back to Top</button>
+        <button class="scroll-btn materi" onclick="scrollToSection('home')">Back to Top</button>
     </div>
 
     <script>
         function scrollToSection(sectionId) {
-            gsap.to(window, { scrollTo: { y: "#" + sectionId, offsetY: 0 }, duration: 1 });
+            gsap.to(window, { scrollTo: { y: "#" + sectionId, offsetY: 0 }, duration: 1, onComplete: () => updateMenu(sectionId) });
+        }
+
+        function updateMenu(sectionId) {
+            const menu = document.getElementById("menu");
+            menu.className = "menu " + sectionId;
+            document.querySelectorAll(".menu-item").forEach(item => {
+                item.className = "menu-item " + sectionId;
+            });
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
