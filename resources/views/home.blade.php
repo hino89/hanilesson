@@ -6,6 +6,12 @@
     <title>makeyoumove</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
+        html {
+            overflow: hidden;  /* Prevents scrolling */
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
         body {
             background-color: #FCE7C8;
             color: #3E3F5B;
@@ -13,6 +19,7 @@
             margin: 0;
             overflow-x: hidden;
             overflow-y: hidden;
+            touch-action: none;
         }
         .section {
             height: 100vh;
@@ -81,11 +88,7 @@
             opacity: 0.8;
         }
 
-        @media (max-width: 400px) {
-            body {
-                overflow-x: hidden;
-                overflow-y: hidden;
-            }
+        @media (max-width: 768px) {
             .materi-buttons {
                 flex-direction: column;
                 gap: 10px;
