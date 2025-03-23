@@ -65,6 +65,25 @@
 
         .scroll-btn.tentang { background-color: #B1C29E; }
         .scroll-btn.materi { background-color: #FADA7A; }
+
+        .materi-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .materi-button {
+            padding: 15px 30px;
+            background-color: #F0A04B;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .materi-button:hover {
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -82,6 +101,11 @@
     </div>
     <div class="section" id="materi" style="background-color: #FADA7A;">
         <h1>Materi Section</h1>
+        <div class="materi-buttons">
+            <a href="{{ route('home') }}" class="materi-button">Tenaga</a>
+            <a href="{{ route('home') }}" class="materi-button">Ruang</a>
+            <a href="{{ route('home') }}" class="materi-button">Waktu</a>
+        </div>
         <button class="scroll-btn materi" onclick="scrollToSection('home')">Back to Top</button>
     </div>
 
