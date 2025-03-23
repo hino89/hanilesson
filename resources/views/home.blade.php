@@ -94,6 +94,7 @@
 
     <div class="section" id="home">
         <h1>Home Section</h1>
+        <img src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 30%">
     </div>
     <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
         <h1>Tentang Section</h1>
