@@ -91,6 +91,7 @@
         @media (max-width: 768px) {
             .menu {
                 margin: auto;
+                left: 50%;
             }
             .materi-buttons {
                 flex-direction: column;
