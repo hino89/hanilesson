@@ -93,7 +93,8 @@
                 flex-direction: column;
             }
             .section img {
-                width: 200% !important;
+                width: 200%;
+                max-width: none;
                 height: auto;
                 position: absolute;
                 top: 50%;
