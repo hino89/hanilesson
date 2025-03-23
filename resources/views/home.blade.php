@@ -88,11 +88,7 @@
             opacity: 0.8;
         }
 
-        @media (max-width: 768px) {
-            .menu {
-                margin: auto;
-                left: 50%;
-            }
+        @media (max-width: 1024x) {
             .materi-buttons {
                 flex-direction: column;
             }
