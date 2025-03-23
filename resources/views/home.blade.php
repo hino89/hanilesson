@@ -27,14 +27,11 @@
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 20px;
             padding: 10px 20px;
-            border-radius: 10px;
         }
         .menu-item {
             padding: 15px 30px;
             color: white;
-            border-radius: 10px;
             cursor: pointer;
             text-align: center;
             transition: background 0.3s;
@@ -42,6 +39,8 @@
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
+            font-size: 18px;
+            font-weight: bold;
         }
 
         .scroll-btn {
@@ -50,7 +49,6 @@
             border: none;
             color: white;
             cursor: pointer;
-            border-radius: 5px;
         }
         .scroll-btn:hover {
             opacity: 0.8;
@@ -58,7 +56,6 @@
 
         /* Dynamic Background Colors */
 
-        
         .menu-item.home { background-color: #FCE7C8; }
         .menu-item.tentang { background-color: #B1C29E; }
         .menu-item.materi { background-color: #FADA7A; }
@@ -77,23 +74,38 @@
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 10px;
             text-decoration: none;
             font-size: 16px;
         }
         .materi-button:hover {
             opacity: 0.8;
         }
+
+        @media (max-width: 768px) {
+            .materi-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .section img {
+                width: 200% !important;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="menu home" id="menu">
-        <div class="menu-item home" onclick="scrollToSection('tentang')">Tentang</div>
-        <div class="menu-item home" onclick="scrollToSection('materi')">Materi</div>
+        <div class="menu-item home menu-tentang" onclick="scrollToSection('tentang')">Tentang</div>
+        <div class="menu-item home menu-materi" onclick="scrollToSection('materi')">Materi</div>
     </div>
 
     <div class="section" id="home">
-        <img src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 50%">
+        <img src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: -1;">
     </div>
     
     <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
