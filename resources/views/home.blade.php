@@ -95,7 +95,7 @@
             .materi-buttons {
                 flex-direction: column;
             }
-            .section img {
+            .home-image-3 {
                 width: 100% !important;
                 height: auto;
                 position: absolute;
@@ -114,7 +114,8 @@
     </div>
 
     <div class="section" id="home">
-        <img src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: -1;">
+        <img class="home-image-3"
+        src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: -1;">
     </div>
     
     <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
