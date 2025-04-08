@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>makeyoumove</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <style>
         html {
-            overflow: hidden;  /* Prevents scrolling */
             width: 100%;
             height: 100%;
             touch-action: none;
+            overflow: hidden;
         }
 
         body {
@@ -18,8 +20,6 @@
             color: #3E3F5B;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            overflow-x: hidden;
-            overflow-y: hidden;
             touch-action: none;
         }
 
@@ -29,6 +29,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            z-index: 1;
         }
 
         .vertical-menu {
@@ -191,9 +192,46 @@
             z-index: -1; /* Place behind the text */
         }
 
+        .section-name {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        #floating-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            overflow: visible;
+            z-index: 0;
+        }
+        .glitter, .sakura {
+            position: absolute;
+            top: -50px;
+            pointer-events: none;
+            z-index: 0; /* this makes them stay behind */
+        }
+        .sakura {
+            width: 24px;
+            height: 24px;
+            background-image: url({{ asset('storage/images/sakura.png') }});
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .glitter {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
     </style>
 </head>
 <body>
+    <div id="floating-container"></div>
     <!-- Vertical Menu -->
 <div class="vertical-menu">
    <!-- Back Button (Home Icon) -->
@@ -218,7 +256,7 @@
     </button>
 </div>
 
-    <div class="section" id="home" style="z-index: 10">
+    <div class="section" id="home">
         <!--
         <div class="home-text">
             <div class="background-shape"></div>
@@ -226,19 +264,19 @@
         </div>
          -->
         <img class="home-image-3"
-        src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: -1;">
+        src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%;">
     </div>
     
-    <div class="section" id="tentang" style="z-index: 20;background-color: #B1C29E; color: white;">
-        <h1>Tentang</h1>
-        <div class="tentang-card">
+    <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
+        <h1 class="section-name">Tentang</h1>
+        <div class="tentang-card" style="z-index: 10">
             <h2>About Us</h2>
             <p>This is a brief description about our project.</p>
         </div>
     </div>
     
-    <div class="section" id="materi" style="z-index: 30; background-color: #FADA7A;">
-        <h1>Materi</h1>
+    <div class="section" id="materi" style="background-color: #FADA7A;">
+        <h1 class="section-name">Materi</h1>
         <div class="materi-cards">
             <a href="{{ route('tenaga') }}" class="materi-card">
                 <img src="{{ asset('storage/images/energy-1.jpg') }}" alt="Tenaga" class="materi-image">
@@ -281,6 +319,104 @@
 
         // Start the animation
         animateGradient();
+
+        gsap.registerPlugin(ScrollTrigger);
+
+// Animate section titles
+gsap.utils.toArray(".section-name").forEach((title) => {
+  gsap.from(title, {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: title,
+      start: "top 80%",
+    },
+  });
+});
+
+
+// Floating animation function
+function animateFall(el) {
+  const fallDistance = window.innerHeight + window.scrollY * 3;
+  const speed = 150;
+  const duration = fallDistance / speed;
+
+  // Random scale (normal to large)
+  const scale = 0.8 + Math.random() * 1.2; // range: 0.8 to 2.0
+  el.style.transform = `scale(${scale})`;
+
+   // Fall down
+  gsap.to(el, {
+    y: fallDistance,
+    x: "+=" + (Math.random() * 40 - 20),
+    rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
+    duration: duration,
+    ease: "linear",
+    onComplete: () => el.remove()
+  });
+
+  // Flutter (horizontal wiggle + rotate wiggle)
+  gsap.to(el, {
+    x: '+=10',
+    rotation: '+=15',
+    repeat: -1,
+    yoyo: true,
+    duration: 1 + Math.random(),
+    ease: 'sine.inOut'
+  });
+
+  // Gentle fade out near the end
+  gsap.to(el, {
+    opacity: 0,
+    duration: 5,
+    delay: duration * 0.6,
+    ease: "sine.out"
+  });
+
+// Twinkle if glitter
+if (el.classList.contains("glitter")) {
+    gsap.to(el, {
+      opacity: 1,
+      scale: 1.3,
+      duration: 0.5 + Math.random() * 0.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+  }
+
+}
+
+        let isTabVisible = true;
+
+        document.addEventListener("visibilitychange", () => {
+            isTabVisible = !document.hidden;
+        });
+
+        // Create falling item (glitter or sakura)
+        function spawn(type) {
+            if (!isTabVisible) return;
+
+            const el = document.createElement("div");
+            el.className = type;
+            el.style.left = Math.random() * 100 + "vw";
+            el.style.top = "-30px";
+            document.getElementById("floating-container").appendChild(el);
+            animateFall(el);
+        }
+
+        // Continuous spawn loop
+        setInterval(() => {
+        spawn("glitter");
+        }, 1000); // every 300ms
+
+        setInterval(() => {
+        spawn("sakura");
+        }, 2000); // every 800ms
+
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </body>

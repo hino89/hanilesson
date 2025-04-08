@@ -26,5 +26,9 @@ Route::get('/waktu', function () {
     return view('waktu');
 })->name('waktu');
 
+Route::get('/hometest', function () {
+    return view('home_animated');
+})->name('hometest');
+
 
 
