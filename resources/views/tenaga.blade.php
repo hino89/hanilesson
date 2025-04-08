@@ -1,6 +1,7 @@
 @extends('materi-layout')
 
 @section('title','Tenaga')
+@section('materi-title', 'TENAGAS')
 
 @section('images')
 <style>

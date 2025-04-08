@@ -34,7 +34,7 @@
     }
 
     .container {
-        height: 500px;
+        height: 70%;
         display: flex;
         flex-wrap: nowrap;
         justify-content: start;
@@ -86,10 +86,13 @@
 
     .description p {
         color: #b0b0ba;
+        font-size: medium;
         padding-top: 5px;
     }
 
     .description h4 {
+        font-size: medium;
+        color: #000;
         text-transform: uppercase;
     }
 
@@ -98,7 +101,7 @@
     }
 
     input:checked + label {
-        width: 600px;
+        width: 800px;
     }
 
     input:checked + label .description {
@@ -153,17 +156,38 @@
     }
 
     .section-2 {
-      background-color: #e5e5e5;
+      background-color: #ffffff;
+    }
+
+    .home-text {
+        position: absolute;
+        top: 7%; /* Positioning the text */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgb(0, 0, 0); /* Text color */
+        z-index: 1; /* Ensure text is above the image */
+    }
+
+    .home-text h1 {
+        font-size: 40px; /* Larger font size for the main heading */
+        margin: 0;
     }
 
 
     </style>
 </head>
 <body>
+
+    <div class="home-text">
+        <div class="background-shape"></div>
+        <h1>@yield('materi-title')</h1>
+    </div>
+
 <!-- Vertical Menu -->
 <div class="vertical-menu">
     <!-- Back Button -->
-    <button class="icon-button" onclick="history.back()" aria-label="Back">
+    <button class="icon-button" onclick="history.back()" style="margin-bottom :50px" aria-label="Back">
         <svg viewBox="0 0 24 24">
         <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
         </svg>
