@@ -391,15 +391,13 @@
         }
 
         // Continuous spawn loop
-
         setInterval(() => {
         spawn("glitter");
-        }, 500); // every 300ms
+        }, 500); 
 
         setInterval(() => {
         spawn("sakura");
-        }, 1000); // every 800ms
-
+        }, 1000); 
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>

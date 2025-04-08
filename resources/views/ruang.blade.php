@@ -5,6 +5,9 @@
 
 @section('images')
 <style>
+    .card[for="c0"] {
+        background-image: url('./img1.jpeg');
+    }
     .card[for="c1"] {
         background-image: url('./img1.jpeg');
     }
@@ -37,6 +40,19 @@
         background-image: url('./img5.jpeg');
     }
 </style>
+@endsection
+
+@section('content-0')
+<input type="radio" id="c0" checked>
+    <label for="c0" class="card">
+        <div class="row">
+            <div class="icon">0</div>
+            <div class="description">
+                <h4>Ruang</h4>
+                <p>test</p>
+            </div>
+        </div>
+    </label>
 @endsection
 
 @section('content-1')
@@ -96,7 +112,7 @@
 @endsection
 
 @section('content-2')
-<input type="radio" name="slide" id="c6" checked>
+<input type="radio" name="slide" id="c6">
     <label for="c6" class="card">
         <div class="row">
             <div class="icon">6</div>

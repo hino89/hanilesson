@@ -151,6 +151,10 @@
       justify-content: center;
       font-size: 2rem;
     }
+    
+    .section-0 {
+      background-color: #ffffff;
+    }
 
     .section-1 {
       background-color: #ffffff;
@@ -195,14 +199,14 @@
     </button>
 
     <!-- Scroll Up -->
-    <button class="icon-button" onclick="scrollToSection(0)" aria-label="Scroll Up">
+    <button id="up-button" class="icon-button" aria-label="Scroll Up">
         <svg viewBox="0 0 24 24">
         <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
         </svg>
     </button>
 
     <!-- Scroll Down -->
-    <button class="icon-button" onclick="scrollToSection(1)" aria-label="Scroll Down">
+    <button id="down-button" class="icon-button"  aria-label="Scroll Down">
         <svg viewBox="0 0 24 24">
         <path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
         </svg>
@@ -211,6 +215,13 @@
 
 <!-- Sections -->
 <div class="scroll-container" id="scroll-container">
+    <section class="section-0">
+        <div class="wrapper">
+            <div class="container">
+                @yield('content-0')
+            </div>
+        </div>
+    </section>
     <section class="section-1">
         <div class="wrapper">
             <div class="container">
@@ -227,18 +238,38 @@
     </section>
 </div>
 
-  <script>
+    <script>    
+    const sections = document.querySelectorAll('section');
+    let currentSection = 0;
+    let isScrolling = false;
+
     function scrollToSection(index) {
-      const sections = document.querySelectorAll("#scroll-container section");
-      if (sections[index]) {
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: { y: sections[index], offsetY: 0 },
-          ease: "power2.inOut"
-        });
-      }
+        if (index >= 0 && index < sections.length && !isScrolling) {
+            isScrolling = true;
+            currentSection = index;
+
+            gsap.to(window, {
+                duration: 1,
+                scrollTo: {
+                    y: sections[index],
+                    offsetY: 20
+                },
+                onComplete: () => {
+                    isScrolling = false;
+                }
+            });
+        }
     }
-  </script>
+
+    // Button listeners
+    document.getElementById('up-button').addEventListener('click', () => {
+        scrollToSection(currentSection - 1);
+    });
+
+    document.getElementById('down-button').addEventListener('click', () => {
+        scrollToSection(currentSection + 1);
+    });
+    </script>
     
 </body>
 </html>
