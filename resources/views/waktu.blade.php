@@ -1,7 +1,7 @@
 @extends('materi-layout')
 
-@section('title','Waktu')
-@section('materi-title', 'WAKTU')
+@section('title','TERUWA | Waktu')
+@section('materi-title', 'Waktu')
 
 @section('images')
 <style>
@@ -45,9 +45,9 @@
         <div class="row">
             <div class="icon">1</div>
             <div class="description">
-                <h4>Winter</h4>
-                <p>Winter has so much to offer -
-                    creative activities</p>
+                <h4>Waktu Lambat</h4>
+                <p>Gerakan yang dilakukan dengan kecepatan yang sangat perlahan,
+                    memberikan kesan meditasi atau keluwesan</p>
             </div>
         </div>
     </label>
@@ -56,9 +56,9 @@
         <div class="row">
             <div class="icon">2</div>
             <div class="description">
-                <h4>Digital Technology</h4>
-                <p>Gets better every day -
-                    stay tuned</p>
+                <h4>Waktu Cepat</h4>
+                <p>Gerakan yang dilakukan dengan kecepatan tinggi, menciptakan kesan energi
+                    atau kegembiraan</p>
             </div>
         </div>
     </label>

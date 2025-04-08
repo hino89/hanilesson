@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>makeyoumove</title>
+    <title>TERUWA</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
@@ -39,7 +39,7 @@
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 50px;
             z-index: 999;
         }
 
@@ -233,7 +233,7 @@
 <body>
     <div id="floating-container"></div>
     <!-- Vertical Menu -->
-<div class="vertical-menu">
+<div class="vertical-menu" style="z-index: 10">
    <!-- Back Button (Home Icon) -->
     <button class="icon-button" onclick="scrollToSection('home')" aria-label="Back to Home">
         <svg viewBox="0 0 24 24">
@@ -264,11 +264,11 @@
         </div>
          -->
         <img class="home-image-3"
-        src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%;">
+        src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">
     </div>
     
     <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
-        <h1 class="section-name">Tentang</h1>
+        <h1 class="section-name" style="z-index: 10">Tentang</h1>
         <div class="tentang-card" style="z-index: 10">
             <h2>About Us</h2>
             <p>This is a brief description about our project.</p>
@@ -276,8 +276,8 @@
     </div>
     
     <div class="section" id="materi" style="background-color: #FADA7A;">
-        <h1 class="section-name">Materi</h1>
-        <div class="materi-cards">
+        <h1 class="section-name" style="z-index: 10">Materi</h1>
+        <div class="materi-cards" style="z-index: 10">
             <a href="{{ route('tenaga') }}" class="materi-card">
                 <img src="{{ asset('storage/images/energy-1.jpg') }}" alt="Tenaga" class="materi-image">
                 <h2>Tenaga</h2>
@@ -322,79 +322,61 @@
 
         gsap.registerPlugin(ScrollTrigger);
 
-// Animate section titles
-gsap.utils.toArray(".section-name").forEach((title) => {
-  gsap.from(title, {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: title,
-      start: "top 80%",
-    },
-  });
-});
+        // Floating animation function
+        function animateFall(el) {
+            const fallDistance = window.innerHeight * 3 + window.scrollY;
+            const speed = 150;
+            const duration = fallDistance / speed;
 
+            // Random scale (normal to large)
+            const scale = 0.8 + Math.random() * 1.2; // range: 0.8 to 2.0
+            el.style.transform = `scale(${scale})`;
 
-// Floating animation function
-function animateFall(el) {
-  const fallDistance = window.innerHeight + window.scrollY * 3;
-  const speed = 150;
-  const duration = fallDistance / speed;
+            // Fall down
+            gsap.to(el, {
+                y: fallDistance,
+                x: "+=" + (Math.random() * 40 - 20),
+                rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
+                duration: duration,
+                ease: "linear",
+                onComplete: () => el.remove()
+            });
 
-  // Random scale (normal to large)
-  const scale = 0.8 + Math.random() * 1.2; // range: 0.8 to 2.0
-  el.style.transform = `scale(${scale})`;
+            // Flutter (horizontal wiggle + rotate wiggle)
+            gsap.to(el, {
+                x: '+=10',
+                rotation: '+=15',
+                repeat: -1,
+                yoyo: true,
+                duration: 1 + Math.random(),
+                ease: 'sine.inOut'
+            });
 
-   // Fall down
-  gsap.to(el, {
-    y: fallDistance,
-    x: "+=" + (Math.random() * 40 - 20),
-    rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
-    duration: duration,
-    ease: "linear",
-    onComplete: () => el.remove()
-  });
+            // Gentle fade out near the end
+            gsap.to(el, {
+                opacity: 0,
+                duration: 8,
+                delay: duration * 0.6,
+                ease: "sine.out"
+            });
 
-  // Flutter (horizontal wiggle + rotate wiggle)
-  gsap.to(el, {
-    x: '+=10',
-    rotation: '+=15',
-    repeat: -1,
-    yoyo: true,
-    duration: 1 + Math.random(),
-    ease: 'sine.inOut'
-  });
-
-  // Gentle fade out near the end
-  gsap.to(el, {
-    opacity: 0,
-    duration: 5,
-    delay: duration * 0.6,
-    ease: "sine.out"
-  });
-
-// Twinkle if glitter
-if (el.classList.contains("glitter")) {
-    gsap.to(el, {
-      opacity: 1,
-      scale: 1.3,
-      duration: 0.5 + Math.random() * 0.5,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-  }
-
+            // Twinkle if glitter
+            if (el.classList.contains("glitter")) {
+                gsap.to(el, {
+                opacity: 1,
+                scale: 1.3,
+                duration: 0.5 + Math.random() * 0.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+                });
+            }
 }
 
         let isTabVisible = true;
-
         document.addEventListener("visibilitychange", () => {
             isTabVisible = !document.hidden;
         });
-
         // Create falling item (glitter or sakura)
         function spawn(type) {
             if (!isTabVisible) return;
@@ -408,13 +390,14 @@ if (el.classList.contains("glitter")) {
         }
 
         // Continuous spawn loop
+
         setInterval(() => {
         spawn("glitter");
-        }, 1000); // every 300ms
+        }, 500); // every 300ms
 
         setInterval(() => {
         spawn("sakura");
-        }, 2000); // every 800ms
+        }, 1000); // every 800ms
 
 
     </script>

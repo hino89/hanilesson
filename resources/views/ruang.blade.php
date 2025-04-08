@@ -1,7 +1,7 @@
 @extends('materi-layout')
 
-@section('title','Ruang')
-@section('materi-title', 'RUANG')
+@section('title','TERUWA | Ruang')
+@section('materi-title', 'TEWRUWA | RUANG')
 
 @section('images')
 <style>
@@ -45,9 +45,9 @@
         <div class="row">
             <div class="icon">1</div>
             <div class="description">
-                <h4>Winter</h4>
-                <p>Winter has so much to offer -
-                    creative activities</p>
+                <h4>Ruang Lurus</h4>
+                <p>Gerakan tari yang dilakukan secara vertikal atau horizontal tanpa perubahan
+                    arah yang mendalam.</p>
             </div>
         </div>
     </label>
@@ -56,9 +56,8 @@
         <div class="row">
             <div class="icon">2</div>
             <div class="description">
-                <h4>Digital Technology</h4>
-                <p>Gets better every day -
-                    stay tuned</p>
+                <h4>Ruang Lingkaran</h4>
+                <p>Gerakan tari yang dilakukan dalam bentuk lingkaran atau melingka</p>
             </div>
         </div>
     </label>

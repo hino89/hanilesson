@@ -1,6 +1,6 @@
 @extends('materi-layout')
 
-@section('title','Tenaga')
+@section('title','TERUWA | Tenaga')
 @section('materi-title', 'TENAGA')
 
 @section('images')
@@ -45,9 +45,9 @@
         <div class="row">
             <div class="icon">1</div>
             <div class="description">
-                <h4>Winter</h4>
-                <p>Winter has so much to offer -
-                    creative activities</p>
+                <h4>Tenaga Kuat</h4>
+                <p>Gerakan yang dilakukan dengan kekuatan besar, seperti lompat tinggi atau
+                dorongan kuat.</p>
             </div>
         </div>
     </label>
@@ -56,9 +56,8 @@
         <div class="row">
             <div class="icon">2</div>
             <div class="description">
-                <h4>Digital Technology</h4>
-                <p>Gets better every day -
-                    stay tuned</p>
+                <h4>Tenaga Lemah</h4>
+                <p>erakan yang lembut dan halus, seperti meluncur atau bergerak pelan</p>
             </div>
         </div>
     </label>
