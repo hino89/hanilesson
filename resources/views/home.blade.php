@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset('sakura.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('sakura-16px.png') }}" type="image/x-icon">
     <title>TERUWA</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -258,12 +258,7 @@
 </div>
 
     <div class="section" id="home">
-        <!--
-        <div class="home-text">
-            <div class="background-shape"></div>
-            <h1>Welcome to Make You Move</h1>
-        </div>
-         -->
+
         <img class="home-image-3"
         src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">
     </div>
@@ -296,42 +291,24 @@
 
     <script>
         function scrollToSection(sectionId) {
-            gsap.to(window, { scrollTo: { y: "#" + sectionId, offsetY: 0 }, duration: 1, onComplete: () => updateMenu(sectionId) });
+            gsap.to(window, { scrollTo: { y: "#" + sectionId, offsetY: 0 }, duration: 1});
         }
-
-        function updateMenu(sectionId) {
-            const menu = document.getElementById("menu");
-            menu.className = "menu " + sectionId;
-            document.querySelectorAll(".menu-item").forEach(item => {
-                item.className = "menu-item " + sectionId;
-            });
-        }
-       // GSAP Animation for Diagonal Gradient Effect
-        const rainbowText = document.querySelector('.home-text h1');
-
-        function animateGradient() {
-            gsap.to(rainbowText, {
-                backgroundPosition: "100% 100%", // Move the background gradient diagonally
-                duration: 10, // Duration of the animation
-                repeat: -1, // Repeat indefinitely
-                ease: "none" // Linear easing for smooth transition
-            });
-        }
-
-        // Start the animation
-        animateGradient();
 
         gsap.registerPlugin(ScrollTrigger);
 
         // Floating animation function
         function animateFall(el) {
-            const fallDistance = window.innerHeight * 3 + window.scrollY;
+            const fallDistance = window.innerHeight * 3.2;
             const speed = 150;
             const duration = fallDistance / speed;
 
             // Random scale (normal to large)
             const scale = 0.8 + Math.random() * 1.2; // range: 0.8 to 2.0
             el.style.transform = `scale(${scale})`;
+
+            setTimeout(() => {
+                if (el.parentNode) el.remove();
+            }, duration * 1000 + 2000);
 
             // Fall down
             gsap.to(el, {
@@ -345,20 +322,12 @@
 
             // Flutter (horizontal wiggle + rotate wiggle)
             gsap.to(el, {
-                x: '+=10',
-                rotation: '+=15',
+                x: '+=15',
+                rotation: '+=20',
                 repeat: -1,
                 yoyo: true,
                 duration: 1 + Math.random(),
                 ease: 'sine.inOut'
-            });
-
-            // Gentle fade out near the end
-            gsap.to(el, {
-                opacity: 0,
-                duration: 8,
-                delay: duration * 0.6,
-                ease: "sine.out"
             });
 
             // Twinkle if glitter
@@ -372,12 +341,14 @@
                 ease: "sine.inOut"
                 });
             }
-}
+
+        }
 
         let isTabVisible = true;
         document.addEventListener("visibilitychange", () => {
             isTabVisible = !document.hidden;
         });
+
         // Create falling item (glitter or sakura)
         function spawn(type) {
             if (!isTabVisible) return;
@@ -398,6 +369,8 @@
         setInterval(() => {
         spawn("sakura");
         }, 1000); 
+
+        
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
