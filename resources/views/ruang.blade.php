@@ -1,7 +1,7 @@
 @extends('materi-layout')
 
 @section('title','TERUWA | Ruang')
-@section('materi-title', 'TEWRUWA | RUANG')
+@section('materi-title', 'Ruang')
 
 @section('images')
 <style>

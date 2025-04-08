@@ -8,7 +8,8 @@
     <!-- GSAP & ScrollToPlugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-
+    
+    <link rel="icon" href="{{ asset('sakura.png') }}" type="image/x-icon">
     <title>@yield('title')</title>
 
     @yield('images')
