@@ -50,7 +50,8 @@
         border-radius: 2rem;
         margin: 0 10px;
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
         transition: .6s cubic-bezier(.28,-0.03,0,.99);
         box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
     }
@@ -97,8 +98,20 @@
         text-transform: uppercase;
     }
 
+    .card-video {
+        opacity: 0;
+        z-index: -1;
+        
+    }
+
     input {
         display: none;
+    }
+
+    input:checked + label .card-video {
+        opacity: 1;
+        z-index: 10;
+        display: block;
     }
 
     input:checked + label {
@@ -109,6 +122,7 @@
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
+    
 
     .vertical-menu {
       position: fixed;

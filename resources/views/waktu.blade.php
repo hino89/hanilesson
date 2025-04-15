@@ -5,8 +5,14 @@
 
 @section('images')
 <style>
+    .card-video {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
     .card[for="c0"] {
-        background-image: url('./img1.jpeg');
+        
     }
     .card[for="c1"] {
         background-image: url('./img1.jpeg');
@@ -58,6 +64,9 @@
 @section('content-1')
 <input type="radio" name="slide" id="c1" checked>
     <label for="c1" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Lambat.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">1</div>
             <div class="description">
@@ -69,6 +78,9 @@
     </label>
     <input type="radio" name="slide" id="c2" >
     <label for="c2" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Cepat.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">2</div>
             <div class="description">
