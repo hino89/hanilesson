@@ -108,8 +108,11 @@
             .materi-buttons {
                 flex-direction: column;
             }
+            .tentang-card {
+                height: 70%;
+            }
             .home-image-3 {
-                width: 100% !important;
+                width: 80% !important;
                 height: auto;
                 position: absolute;
                 top: 50%;
@@ -131,12 +134,24 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
+            padding: 10px;
             text-align: center;
             width: 200px; /* Adjust width as needed */
             text-decoration: none; /* Remove underline from links */
             color: inherit; /* Inherit text color */
             transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for shadow and transform */
+        }
+        @media (max-width: 768px) {
+            .materi-cards {
+                width: 60%;
+                height: 50%;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .materi-card {
+                width: 100px;
+                font-size: small;
+            }
         }
 
         .materi-card:hover {
@@ -158,7 +173,7 @@
             color: #3E3F5B;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
+            padding: 10px;
             text-align: center;
             width: 300px; /* Adjust width as needed */
             margin: 20px auto; /* Center the card */

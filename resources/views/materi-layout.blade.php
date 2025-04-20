@@ -101,7 +101,7 @@
     .card-video {
         opacity: 0;
         z-index: -1;
-        
+        display: none;
     }
 
     input {

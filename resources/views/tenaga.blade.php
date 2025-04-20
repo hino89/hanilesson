@@ -65,7 +65,7 @@
 <input type="radio" name="slide" id="c1" checked>
     <label for="c1" class="card">
         <video controls muted loop playsinline class="card-video">
-            <source src="{{ asset('storage/videos/Tajam-Pencak-Silat.mp4') }}" type="video/mp4">
+            <source src="{{ asset('storage/videos/Tenaga-Kuat.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
             <div class="icon">1</div>

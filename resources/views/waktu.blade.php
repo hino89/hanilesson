@@ -92,33 +92,43 @@
     </label>
     <input type="radio" name="slide" id="c3" >
     <label for="c3" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Cepat.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">3</div>
             <div class="description">
-                <h4>Globalization</h4>
-                <p>Help people all over the world</p>
+                <h4>Waktu Berulang</h4>
+                <p>Gerakan yang diulang dalam periode waktu yang sama, seperti langkah
+                    atau pola tari yang terus-menerus</p>
             </div>
         </div>
     </label>
     <input type="radio" name="slide" id="c4" >
     <label for="c4" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Berhenti.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">4</div>
             <div class="description">
-                <h4>New technologies</h4>
-                <p>Space engineering becomes
-                    more and more advanced</p>
+                <h4>Waktu Berhenti</h4>
+                <p>Menghentikan gerakan untuk sejenak dalam waktu tertentu, menciptakan
+                    efek dramatis atau penekanan pada momen tertentu</p>
             </div>
         </div>
     </label>
     <input type="radio" name="slide" id="c5" >
     <label for="c5" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Tertunda.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">5</div>
             <div class="description">
-                <h4>New technologies</h4>
-                <p>Space engineering becomes
-                    more and more advanced</p>
+                <h4>Waktu Tertunda</h4>
+                <p>Gerakan yang sedikit tertunda atau memiliki jeda sebelum dilanjutkan,
+                    memberikan kesan ketegangan atau keterlambatan</p>
             </div>
         </div>
     </label>
@@ -127,55 +137,71 @@
 @section('content-2')
 <input type="radio" name="slide" id="c6">
     <label for="c6" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Tiba.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">6</div>
             <div class="description">
-                <h4>Winter</h4>
-                <p>Winter has so much to offer -
-                    creative activities</p>
+                <h4>Waktu Tiba-tiba</h4>
+                <p>Perubahan kecepatan yang mendadak, seperti perubahan tiba-tiba dari
+                    gerakan lambat menjadi cepat</p>
             </div>
         </div>
     </label>
     <input type="radio" name="slide" id="c7" >
     <label for="c7" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Putus.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">7</div>
             <div class="description">
-                <h4>Digital Technology</h4>
-                <p>Gets better every day -
-                    stay tuned</p>
+                <h4>Waktu Terputus-putus</h4>
+                <p>Gerakan yang dilakukan dengan jeda atau pemisahan waktu antara
+                    satu gerakan dengan yang lainnya</p>
             </div>
         </div>
     </label>
     <input type="radio" name="slide" id="c8" >
     <label for="c8" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Sederhana.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">8</div>
             <div class="description">
-                <h4>Globalization</h4>
-                <p>Help people all over the world</p>
+                <h4>Waktu Sederhana</h4>
+                <p>Gerakan yang dilakukan dalam pola waktu yang teratur dan mudah
+                    diikuti, seperti langkah tari berirama</p>
             </div>
         </div>
     </label>
     <input type="radio" name="slide" id="c9" >
     <label for="c9" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Berirama.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">9</div>
             <div class="description">
-                <h4>New technologies</h4>
-                <p>Space engineering becomes
-                    more and more advanced</p>
+                <h4>Waktu Berirama</h4>
+                <p>Gerakan yang mengikuti ritme atau tempo musik yang teratur,
+                    menciptakan sinkronisasi antara musik dan tubuh</p>
             </div>
         </div>
     </label>
     <input type="radio" name="slide" id="c10" >
     <label for="c10" class="card">
+        <video controls muted loop playsinline class="card-video">
+            <source src="{{ asset('storage/videos/Waktu-Improvisasi.mp4') }}" type="video/mp4">
+        </video>
         <div class="row">
             <div class="icon">10</div>
             <div class="description">
-                <h4>New technologies</h4>
-                <p>Space engineering becomes
-                    more and more advanced</p>
+                <h4>Waktu Improviasi</h4>
+                <p>Gerakan yang dilakukan tanpa mengikuti waktu yang terstruktur,
+                    memberikan kebebasan ekspresi dan spontanitas pada penari</p>
             </div>
         </div>
     </label>
