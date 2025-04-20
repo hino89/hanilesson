@@ -222,7 +222,7 @@
             width: 100vw;
             height: 100vh;
             pointer-events: none;
-            overflow: visible;
+            overflow-y: visible;
             overflow-x: hidden;
             z-index: 0;
         }
