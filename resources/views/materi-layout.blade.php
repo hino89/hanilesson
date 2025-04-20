@@ -18,7 +18,8 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;t
+        overflow: hidden;
     }
 
     body {
@@ -32,6 +33,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
     }
 
     .container {
@@ -39,6 +41,7 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: start;
+        overflow: hidden;
     }
 
     .card {
@@ -53,7 +56,7 @@
         flex-direction: column;
         align-items: flex-start;
         transition: .6s cubic-bezier(.28,-0.03,0,.99);
-        box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+        border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .card > .row {

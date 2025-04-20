@@ -109,7 +109,8 @@
                 flex-direction: column;
             }
             .tentang-card {
-                height: 70%;
+                height: 60%;
+                width: 60% !important;
             }
             .home-image-3 {
                 width: 80% !important;
@@ -175,8 +176,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 10px;
             text-align: center;
-            width: 300px; /* Adjust width as needed */
-            margin: 20px auto; /* Center the card */
+            width: 800px; /* Adjust width as needed */
+            margin: 10px auto; /* Center the card */
         }
 
         .home-text {
