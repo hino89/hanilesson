@@ -229,6 +229,7 @@
             position: absolute;
             top: -50px;
             pointer-events: none;
+            will-change: transform;
             z-index: 0; /* this makes them stay behind */
         }
         .sakura {
