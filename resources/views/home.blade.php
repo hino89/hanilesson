@@ -222,8 +222,7 @@
             width: 100vw;
             height: 100vh;
             pointer-events: none;
-            overflow-y: visible;
-            overflow-x: hidden;
+            overflow: visible;
             z-index: 0;
         }
         .glitter, .sakura {
