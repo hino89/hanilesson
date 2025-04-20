@@ -371,7 +371,7 @@
 
             const el = document.createElement("div");
             el.className = type;
-            el.style.left = Math.random() * 100 + "vw";
+            el.style.left = (Math.random() * 90 + 5) + "vw";
             el.style.top = "-30px";
             document.getElementById("floating-container").appendChild(el);
             animateFall(el);
