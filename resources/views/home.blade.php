@@ -220,9 +220,10 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 100vh;
+            height: 100%;
             pointer-events: none;
-            overflow: visible;
+            overflow-x: hidden;
+            overflow-y: visible; 
             z-index: 0;
         }
         .glitter, .sakura {
@@ -372,7 +373,7 @@
 
             const el = document.createElement("div");
             el.className = type;
-            el.style.left = (Math.random() * 90 + 5) + "vw";
+            el.style.left = Math.random() * 100 + "vw";
             el.style.top = "-30px";
             document.getElementById("floating-container").appendChild(el);
             animateFall(el);
