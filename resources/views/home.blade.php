@@ -324,7 +324,7 @@
 
             setTimeout(() => {
                 if (el.parentNode) el.remove();
-            }, duration * 1000 + 2000);
+            }, duration * 1000 + 0);
 
             // Fall down
             gsap.to(el, {
