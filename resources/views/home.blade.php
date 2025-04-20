@@ -314,7 +314,7 @@
 
         // Floating animation function
         function animateFall(el) {
-            const fallDistance = window.innerHeight * 3.2;
+            const fallDistance = window.innerHeight * 3.1;
             const speed = 150;
             const duration = fallDistance / speed;
 
