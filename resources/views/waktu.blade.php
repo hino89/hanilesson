@@ -1,15 +1,11 @@
 @extends('materi-layout')
 
 @section('title','TERUWA | Waktu')
-@section('materi-title', 'Waktu')
+@section('materi-title', 'WAKTU')
 
 @section('images')
 <style>
-    .card-video {
-        position: relative;
-        height: 100%;
-        width: 100%;
-    }
+    
 
     .card[for="c0"] {
         

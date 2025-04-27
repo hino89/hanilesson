@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    @include('home-flowers')
     <style>
         html {
             width: 100vw;
@@ -101,27 +102,7 @@
             opacity: 0.8;
         }
 
-        @media (max-width: 768px) {
-            .section {
-                overflow: hidden;
-            }
-            .materi-buttons {
-                flex-direction: column;
-            }
-            .tentang-card {
-                height: 60%;
-                width: 60% !important;
-            }
-            .home-image-3 {
-                width: 80% !important;
-                height: auto;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: -1;
-            }
-        }
+        
 
         .materi-cards {
             display: flex;
@@ -142,18 +123,7 @@
             color: inherit; /* Inherit text color */
             transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for shadow and transform */
         }
-        @media (max-width: 768px) {
-            .materi-cards {
-                width: 60%;
-                height: 50%;
-                flex-direction: column;
-                gap: 20px;
-            }
-            .materi-card {
-                width: 100px;
-                font-size: small;
-            }
-        }
+        
 
         .materi-card:hover {
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
@@ -246,6 +216,40 @@
             background: rgba(255, 255, 255, 0.8);
         }
 
+        @media (max-width: 768px) {
+            .materi-cards {
+                width: 60%;
+                height: 50%;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .materi-card {
+                width: 100px;
+                font-size: small;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                overflow: hidden;
+            }
+            .materi-buttons {
+                flex-direction: column;
+            }
+            .tentang-card {
+                width: 60% !important;
+            }
+            .home-image-3 {
+                width: 80% !important;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -282,13 +286,19 @@
     
     <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
         <h1 class="section-name" style="z-index: 10">Tentang</h1>
+        <div class="tentang-flower-1">
+            <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
+        </div>
         <div class="tentang-card" style="z-index: 10">
-            <h2>About Us</h2>
-            <p>This is a brief description about our project.</p>
+            <h2>TERUWA</h2>
+            <p>Tenaga - Ruang - Waktu <br> Kelas VII</p>
         </div>
     </div>
     
     <div class="section" id="materi" style="background-color: #FADA7A;">
+        <div class="materi-flower-1">
+            <img src="{{ asset('storage/images/lavender.png') }}" alt="">
+        </div>
         <h1 class="section-name" style="z-index: 10">Materi</h1>
         <div class="materi-cards" style="z-index: 10">
             <a href="{{ route('tenaga') }}" class="materi-card">
