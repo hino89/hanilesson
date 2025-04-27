@@ -26,13 +26,13 @@
             touch-action: none;
         }
 
-        .section {
-            min-height: 100dvh;
+        section {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            z-index: 1;
+            z-index: -1;
         }
 
         .materi-buttons {
@@ -52,9 +52,6 @@
         .materi-button:hover {
             opacity: 0.8;
         }
-
-        
-
         .materi-cards {
             display: flex;
             justify-content: center;
@@ -62,8 +59,8 @@
             flex-wrap: wrap;
             margin-top: 20px;
         }
-
         .materi-card {
+            position: relative;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -74,13 +71,10 @@
             color: inherit; /* Inherit text color */
             transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for shadow and transform */
         }
-        
-
         .materi-card:hover {
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
             transform: scale(1.05) rotate(2deg); /* Scale and rotate effect */
         }
-
         .materi-image {
             width: auto;
             height: auto;
@@ -91,6 +85,7 @@
         }
 
         .tentang-card {
+            position: relative;
             background-color: white;
             color: #3E3F5B;
             border-radius: 10px;
@@ -99,16 +94,7 @@
             text-align: center;
             width: 800px; /* Adjust width as needed */
             margin: 10px auto; /* Center the card */
-        }
-
-        .home-text {
-            position: absolute;
-            top: 10%; /* Positioning the text */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white; /* Text color */
-            z-index: 1; /* Ensure text is above the image */
+            z-index: 100 !important;
         }
 
         .section-name {
@@ -162,7 +148,7 @@
         }
 
         @media (max-width: 768px) {
-            .section {
+            section {
                 overflow: hidden;
             }
             .materi-buttons {
@@ -170,6 +156,7 @@
             }
             .tentang-card {
                 width: 60% !important;
+                z-index: 20;
             }
             .home-image-3 {
                 width: 80% !important;
@@ -188,64 +175,83 @@
     </style>
 </head>
 <body>
+    <!--
     <div id="floating-container"></div>
+    -->
     <!-- Vertical Menu -->
     
 
-    <div class="section" id="home">
+    
+    <section class="section-0" id="home">
 
-        <img class="home-image-3"
-        src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">
-    </div>
+            <img class="home-image-3"
+            src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">
+    </section>
+    <section class="section-1" id="tentang" style="background-color: #B1C29E; color: white;">
+            <h1 class="section-name" style="z-index: 10">Tentang</h1>
+            <div class="tentang-flower-1">
+                <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
+            </div>
+            <div class="tentang-card">
+                <h2>TERUWA</h2>
+                <p>Tenaga - Ruang - Waktu <br> Kelas VII</p>
+            </div>
+    </section>
+    <section class="section-2" id="materi"style="background-color: #FADA7A;">
+            <div class="materi-flower-1">
+                <img src="{{ asset('storage/images/lavender.png') }}" alt="">
+            </div>
+            <h1 class="section-name" style="z-index: 10">Materi</h1>
+            <div class="materi-cards" style="z-index: 10">
+                <a href="{{ route('tenaga') }}" class="materi-card">
+                    <img src="{{ asset('storage/images/energy-1.jpg') }}" alt="Tenaga" class="materi-image">
+                    <h2>Tenaga</h2>
+                </a>
+                <a href="{{ route('ruang') }}" class="materi-card">
+                    <img src="{{ asset('storage/images/space-1.jpg') }}" alt="Ruang" class="materi-image">
+                    <h2>Ruang</h2>
+                </a>
+                <a href="{{ route('waktu') }}" class="materi-card">
+                    <img src="{{ asset('storage/images/time-1.jpg') }}" alt="Waktu" class="materi-image">
+                    <h2>Waktu</h2>
+                </a>
+            </div>
+    </section>
     
-    <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
-        <h1 class="section-name" style="z-index: 10">Tentang</h1>
-        <div class="tentang-flower-1">
-            <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
-        </div>
-        <div class="tentang-card" style="z-index: 10">
-            <h2>TERUWA</h2>
-            <p>Tenaga - Ruang - Waktu <br> Kelas VII</p>
-        </div>
-    </div>
     
-    <div class="section" id="materi" style="background-color: #FADA7A;">
-        <div class="materi-flower-1">
-            <img src="{{ asset('storage/images/lavender.png') }}" alt="">
-        </div>
-        <h1 class="section-name" style="z-index: 10">Materi</h1>
-        <div class="materi-cards" style="z-index: 10">
-            <a href="{{ route('tenaga') }}" class="materi-card">
-                <img src="{{ asset('storage/images/energy-1.jpg') }}" alt="Tenaga" class="materi-image">
-                <h2>Tenaga</h2>
-            </a>
-            <a href="{{ route('ruang') }}" class="materi-card">
-                <img src="{{ asset('storage/images/space-1.jpg') }}" alt="Ruang" class="materi-image">
-                <h2>Ruang</h2>
-            </a>
-            <a href="{{ route('waktu') }}" class="materi-card">
-                <img src="{{ asset('storage/images/time-1.jpg') }}" alt="Waktu" class="materi-image">
-                <h2>Waktu</h2>
-            </a>
-        </div>
-    </div>
+    
 
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+    const sections = document.querySelectorAll('section');
+    let currentSection = 0;
+    let isScrolling = false;
 
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            
-            if (section) {
-                gsap.to(window, { 
-                    scrollTo: { 
-                        y: section.offsetTop, 
-                        offsetY: 0 
-                    },
-                    duration: 1
-                });
-            }
+    function scrollToSection(index) {
+        if (index >= 0 && index < sections.length && !isScrolling) {
+            isScrolling = true;
+            currentSection = index;
+
+            gsap.to(window, {
+                duration: 1,
+                scrollTo: {
+                    y: sections[index],
+                    offsetY: 0
+                },
+                onComplete: () => {
+                    isScrolling = false;
+                }
+            });
         }
+    }
+
+    // Button listeners
+    document.getElementById('up-button').addEventListener('click', () => {
+        scrollToSection(currentSection - 1);
+    });
+
+    document.getElementById('down-button').addEventListener('click', () => {
+        scrollToSection(currentSection + 1);
+    });
 
 
 
@@ -323,16 +329,6 @@
         spawn("sakura");
         }, 1000); 
         */
-        
-        function setFullHeight() {
-            const vh = window.innerHeight * 0.01; // Get 1% of the actual viewport height
-            document.documentElement.style.setProperty('--vh', `${vh}px`); // Set it as a custom CSS property
-        }
-
-        // Set the full height on load and whenever the window is resized
-        window.addEventListener('resize', setFullHeight);
-        window.addEventListener('orientationchange', setFullHeight); // Handles orientation change
-        setFullHeight(); // Call it initially to set the correct height
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
