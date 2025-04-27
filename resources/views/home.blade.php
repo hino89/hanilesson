@@ -235,15 +235,19 @@
 
     <script>
         function scrollToSection(sectionId) {
-            gsap.to(window, { 
-                scrollTo: { 
-                    y: "#"+sectionId,
-                    offsetY: 0,
-                    max: true // This might fix the issue on mobile
-                }, 
-                duration: 1 
-            });
-        }
+    const section = document.getElementById(sectionId);
+    
+    if (section) {
+        gsap.to(window, { 
+            scrollTo: { 
+                y: section, 
+                offsetY: 0 
+            },
+            duration: 1
+        });
+    }
+}
+
 
 
         gsap.registerPlugin(ScrollTrigger);
