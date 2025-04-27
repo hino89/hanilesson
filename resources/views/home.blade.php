@@ -179,8 +179,7 @@
                 z-index: -1;
             }
             html,body {
-                overflow-y : hidden; 
-                overflow-x: hidden;
+                overflow: visible;
 
             }
             .vertical-menu-0 {
@@ -257,12 +256,12 @@
 
         // Floating animation function
         function animateFall(el) {
-            const fallDistance = window.innerHeight * 2.8;
+            const fallDistance = window.innerHeight * 3.1;
             const speed = 150;
             const duration = fallDistance / speed;
 
             // Random scale (normal to large)
-            const scale = 0.8 + Math.random();
+            const scale = 0.8 + Math.random() * 1.2;
             el.style.transform = `scale(${scale})`;
 
             // Fall down + fade out for both glitter and sakura
@@ -270,7 +269,7 @@
                 y: fallDistance,
                 x: "+=" + (Math.random() * 40 - 20),
                 rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
-                opacity: 0, // <-- fade out while falling
+                opacity: 1, // <-- fade out while falling
                 duration: duration,
                 ease: "linear",
                 onComplete: () => el.remove()
@@ -316,7 +315,7 @@
             document.getElementById("floating-container").appendChild(el);
             animateFall(el);
         }
-        
+        /*
         // Continuous spawn loop
         setInterval(() => {
         spawn("glitter");
@@ -325,7 +324,7 @@
         setInterval(() => {
         spawn("sakura");
         }, 1000); 
-        
+        */
         
         function setFullHeight() {
             const vh = window.innerHeight * 0.01; // Get 1% of the actual viewport height
