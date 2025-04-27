@@ -14,7 +14,6 @@
         html {
             width: 100vw;
             height: 100vh;
-            touch-action: none;
             overflow: hidden;
         }
 
@@ -23,7 +22,6 @@
             color: #3E3F5B;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            touch-action: none;
         }
 
         .section {
