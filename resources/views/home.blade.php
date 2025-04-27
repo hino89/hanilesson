@@ -255,7 +255,7 @@
 <body>
     <div id="floating-container"></div>
     <!-- Vertical Menu -->
-<div class="vertical-menu" style="z-index: 10">
+    <div class="vertical-menu" style="z-index: 10">
    <!-- Back Button (Home Icon) -->
     <button class="icon-button" onclick="scrollToSection('home')" aria-label="Back to Home">
         <svg viewBox="0 0 24 24">
@@ -325,26 +325,34 @@
 
         // Floating animation function
         function animateFall(el) {
-            const fallDistance = window.innerHeight * 3.1;
+            const fallDistance = window.innerHeight * 3;
             const speed = 150;
             const duration = fallDistance / speed;
 
             // Random scale (normal to large)
-            const scale = 0.8 + Math.random() * 1.2; // range: 0.8 to 2.0
+            const scale = 0.8 + Math.random() * 1.2;
             el.style.transform = `scale(${scale})`;
 
-            setTimeout(() => {
-                if (el.parentNode) el.remove();
-            }, duration * 1000 + 0);
-
-            // Fall down
+            // Fall down animation
             gsap.to(el, {
                 y: fallDistance,
                 x: "+=" + (Math.random() * 40 - 20),
                 rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
                 duration: duration,
                 ease: "linear",
-                onComplete: () => el.remove()
+                onComplete: () => {
+                    if (el.classList.contains("glitter") || el.classList.contains("sakura")) {
+                        // Fade out first before removing
+                        gsap.to(el, {
+                            opacity: 0,
+                            duration: 1,
+                            onComplete: () => el.remove()
+                        });
+                    } else {
+                        // Directly remove sakura or other items
+                        el.remove();
+                    }
+                }
             });
 
             // Flutter (horizontal wiggle + rotate wiggle)
@@ -360,16 +368,16 @@
             // Twinkle if glitter
             if (el.classList.contains("glitter")) {
                 gsap.to(el, {
-                opacity: 1,
-                scale: 1.3,
-                duration: 0.5 + Math.random() * 0.5,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
+                    opacity: 1,
+                    scale: 1.3,
+                    duration: 0.5 + Math.random() * 0.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut"
                 });
             }
-
         }
+
 
         let isTabVisible = true;
         document.addEventListener("visibilitychange", () => {
