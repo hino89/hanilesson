@@ -1,5 +1,13 @@
 <style>
 
+.tentang-flower-1 {
+    overflow: hidden;
+}
+
+.materi-flower-1 {
+    overflow: hidden;
+}
+
 .tentang-flower-1 img {
     position: absolute;
     width: 550px;

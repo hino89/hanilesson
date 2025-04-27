@@ -188,8 +188,8 @@
         #floating-container {
             position: absolute;
             top: 0;
-            left: 10%;
-            width: 80vw;
+            left: 0;
+            width: 100vw;
             height: 300vh;
             pointer-events: none;
             overflow: hidden;
@@ -325,7 +325,7 @@
 
         // Floating animation function
         function animateFall(el) {
-            const fallDistance = window.innerHeight * 3.2;
+            const fallDistance = window.innerHeight * 3.1;
             const speed = 150;
             const duration = fallDistance / speed;
 
