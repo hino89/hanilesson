@@ -301,7 +301,7 @@
             document.getElementById("floating-container").appendChild(el);
             animateFall(el);
         }
-
+        /*
         // Continuous spawn loop
         setInterval(() => {
         spawn("glitter");
@@ -310,7 +310,7 @@
         setInterval(() => {
         spawn("sakura");
         }, 1000); 
-
+        */
         
 
     </script>
