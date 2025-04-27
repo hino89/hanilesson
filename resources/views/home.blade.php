@@ -179,7 +179,7 @@
                 z-index: -1;
             }
             html,body {
-                overflow-y : visible; 
+                overflow-y : hidden; 
                 overflow-x: hidden;
 
             }
