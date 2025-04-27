@@ -185,7 +185,7 @@
             }
             html {
                 overflow: hidden;
-                height: --300vh;
+                height: calc(var(--vh, 1vh) * 100);
             }
         }
 
