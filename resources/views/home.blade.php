@@ -262,7 +262,7 @@
             const duration = fallDistance / speed;
 
             // Random scale (normal to large)
-            const scale = 0.8 + Math.random() * 1.2;
+            const scale = 0.8 + Math.random();
             el.style.transform = `scale(${scale})`;
 
             // Fall down + fade out for both glitter and sakura
