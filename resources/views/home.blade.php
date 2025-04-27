@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     @include('home-flowers')
+    @include('vertical-menu')
     <style>
         html {
             width: 100vw;
@@ -34,55 +35,7 @@
             z-index: 1;
         }
 
-        .vertical-menu {
-            position: fixed;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            z-index: 999;
-        }
-
-        .icon-button {
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-        }
-
-        .icon-button svg {
-            width: 30px;
-            height: 30px;
-            fill: #666;
-            transition: fill 0.3s ease, transform 0.3s ease;
-        }
-
-        .icon-button:hover svg {
-            fill: #000;
-            transform: scale(1.5);
-        }
-
-        .scroll-btn {
-            padding: 10px 20px;
-            border: none;
-            color: white;
-            cursor: pointer;
-            position: relative;
-            bottom: -35%;
-            right: 0%;
-        }
-        .scroll-btn:hover {
-            opacity: 0.8;
-        }
-
-        .scroll-btn.tentang { 
-            background-color: #B1C29E; 
-        }
-        .scroll-btn.materi { 
-            background-color: #FADA7A; 
-        }
+        
 
         .materi-buttons {
             display: flex;
@@ -158,25 +111,6 @@
             text-align: center;
             color: white; /* Text color */
             z-index: 1; /* Ensure text is above the image */
-        }
-
-        .home-text h1 {
-            font-size: 30px; /* Larger font size for the main heading */
-            margin: 0;
-            background: linear-gradient(135deg, #FCE7C8, #B1C29E, #FADA7A); /* Diagonal gradient */
-            background-size: 300%; /* Increase the size for smooth animation */
-            -webkit-background-clip: text; /* Clip the background to the text */
-            -webkit-text-fill-color: transparent; /* Make the text color transparent */
-        }
-        .background-shape {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) skew(-20deg); /* Skew to create a parallelogram effect */
-            width: 130%; /* Full width */
-            height: 130%; /* Full height */
-            background-color: rgba(255, 255, 255, 0.5); /* Background color with transparency */
-            z-index: -1; /* Place behind the text */
         }
 
         .section-name {
@@ -255,28 +189,7 @@
 <body>
     <div id="floating-container"></div>
     <!-- Vertical Menu -->
-    <div class="vertical-menu" style="z-index: 10">
-   <!-- Back Button (Home Icon) -->
-    <button class="icon-button" onclick="scrollToSection('home')" aria-label="Back to Home">
-        <svg viewBox="0 0 24 24">
-        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-    </button>
-  
-    <!-- Scroll Up (About/User Icon) -->
-    <button class="icon-button" onclick="scrollToSection('tentang')" aria-label="Scroll to About">
-        <svg viewBox="0 0 24 24">
-        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-        </svg>
-    </button>
-  
-    <!-- Scroll Down (List Icon) -->
-    <button class="icon-button" onclick="scrollToSection('materi')" aria-label="Scroll to List">
-        <svg viewBox="0 0 24 24">
-        <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zm0-8h14V7H7v2z"/>
-        </svg>
-    </button>
-</div>
+    
 
     <div class="section" id="home">
 
