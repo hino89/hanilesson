@@ -185,7 +185,7 @@
             }
             html {
                 overflow: hidden;
-                height: 300vh;
+                height: --300vh;
             }
         }
 
@@ -326,6 +326,16 @@
         }, 1000); 
         */
         
+        function setFullHeight() {
+            const vh = window.innerHeight * 0.01; // Get 1% of the actual viewport height
+            document.documentElement.style.setProperty('--vh', `${vh}px`); // Set it as a custom CSS property
+        }
+
+        // Set the full height on load and whenever the window is resized
+        window.addEventListener('resize', setFullHeight);
+        window.addEventListener('orientationchange', setFullHeight); // Handles orientation change
+        setFullHeight(); // Call it initially to set the correct height
+
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
