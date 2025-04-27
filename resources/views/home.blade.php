@@ -25,7 +25,9 @@
             margin: 0;
             touch-action: none;
         }
-
+        .scroll-container {
+            position: relative;
+        }
         section {
             min-height: 100vh;
             display: flex;
@@ -181,7 +183,7 @@
     <!-- Vertical Menu -->
     
 
-    
+<div class="scroll-container" id="scroll-container">
     <section class="section-0" id="home">
 
             <img class="home-image-3"
@@ -217,7 +219,7 @@
                 </a>
             </div>
     </section>
-    
+</div>
     
     
 
