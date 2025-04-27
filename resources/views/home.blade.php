@@ -27,7 +27,7 @@
         }
 
         .section {
-            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -333,13 +333,6 @@
         window.addEventListener('resize', setFullHeight);
         window.addEventListener('orientationchange', setFullHeight); // Handles orientation change
         setFullHeight(); // Call it initially to set the correct height
-
-        window.addEventListener('load', () => {
-  setTimeout(() => {
-    window.scrollTo(0, 1);
-  }, 0);
-});
-
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
