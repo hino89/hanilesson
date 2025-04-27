@@ -257,7 +257,7 @@
 
         // Floating animation function
         function animateFall(el) {
-            const fallDistance = window.innerHeight * 3.1;
+            const fallDistance = window.innerHeight * 2.8;
             const speed = 150;
             const duration = fallDistance / speed;
 
@@ -270,7 +270,7 @@
                 y: fallDistance,
                 x: "+=" + (Math.random() * 40 - 20),
                 rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
-                opacity: 1, // <-- fade out while falling
+                opacity: 0, // <-- fade out while falling
                 duration: duration,
                 ease: "linear",
                 onComplete: () => el.remove()
