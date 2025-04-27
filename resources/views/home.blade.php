@@ -188,8 +188,8 @@
         #floating-container {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100vw;
+            left: 10%;
+            width: 80vw;
             height: 300vh;
             pointer-events: none;
             overflow: hidden;
