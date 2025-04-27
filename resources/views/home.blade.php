@@ -27,7 +27,7 @@
         }
 
         .section {
-            height: calc(var(--vh, 1vh) * 100);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
