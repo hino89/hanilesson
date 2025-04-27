@@ -185,6 +185,10 @@
             }
             html, body {
                 overflow: hidden;
+                min-width: 100vh;
+                max-width: 100vh;
+                max-height: 300vh;
+                min-height: 300vh;
             }
         }
 
