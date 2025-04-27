@@ -235,7 +235,13 @@
 
     <script>
         function scrollToSection(sectionId) {
-            gsap.to(window, { scrollTo: { y: "#" + sectionId, offsetY: 0 }, duration: 1});
+            gsap.to(window, { 
+                scrollTo: { 
+                    y: "#" + sectionId, 
+                    offsetY: 0 
+                }, 
+                duration: 1 
+            });
         }
 
         gsap.registerPlugin(ScrollTrigger);
