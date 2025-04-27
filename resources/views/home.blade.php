@@ -257,7 +257,7 @@
 
 
         
-
+    /*
         // Floating animation function
         function animateFall(el) {
             const fallDistance = window.innerHeight * 3.1;
@@ -319,6 +319,7 @@
             document.getElementById("floating-container").appendChild(el);
             animateFall(el);
         }
+            */
         /*
         // Continuous spawn loop
         setInterval(() => {
