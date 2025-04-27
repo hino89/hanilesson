@@ -179,7 +179,8 @@
                 z-index: -1;
             }
             html,body {
-                overflow: visible;
+                overflow-y : visible; 
+                overflow-x: hidden;
 
             }
             .vertical-menu-0 {
