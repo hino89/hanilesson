@@ -23,7 +23,7 @@
     position: absolute;
     width: 550px;
     left: 73%;
-    top: 260%;
+    top: 280%;
     transform: translate(-50%, -50%);
     z-index: 0;
     overflow: hidden;

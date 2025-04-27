@@ -27,15 +27,13 @@
         }
 
         .section {
-            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             z-index: 1;
         }
-
-        
 
         .materi-buttons {
             display: flex;
