@@ -184,7 +184,6 @@
                 z-index: -1;
             }
             html, body {
-                scroll-behavior: smooth;
                 overflow: hidden;
             }
         }
