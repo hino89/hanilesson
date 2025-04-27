@@ -8,6 +8,7 @@
     transform: translate(-50%, -50%);
     z-index: 0;
     animation: spin 30s linear infinite;
+    overflow: hidden;
 }
 
 .materi-flower-1 img {
@@ -17,6 +18,7 @@
     top: 260%;
     transform: translate(-50%, -50%);
     z-index: 0;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
