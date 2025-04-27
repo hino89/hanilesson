@@ -152,12 +152,11 @@
         @media (max-width: 768px) {
             .materi-cards {
                 width: 60%;
-                height: 50%;
-                flex-direction: column;
-                gap: 20px;
+                flex-direction: row;
+                gap: 2%;
             }
             .materi-card {
-                width: 100px;
+                width: 38%;
                 font-size: small;
             }
         }
@@ -167,7 +166,7 @@
                 overflow: hidden;
             }
             .materi-buttons {
-                flex-direction: column;
+                flex-direction: column !important;
             }
             .tentang-card {
                 width: 60% !important;
@@ -233,19 +232,21 @@
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
+
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             
             if (section) {
                 gsap.to(window, { 
                     scrollTo: { 
-                        y: section, 
+                        y: section.offsetTop, 
                         offsetY: 0 
                     },
                     duration: 1
                 });
             }
         }
+
 
 
 
