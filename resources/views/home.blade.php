@@ -183,12 +183,9 @@
                 transform: translate(-50%, -50%);
                 z-index: -1;
             }
-            html, body {
+            html {
                 overflow: hidden;
-                min-width: 100vh;
-                max-width: 100vh;
-                max-height: 300vh;
-                min-height: 300vh;
+                height: 300vh;
             }
         }
 
