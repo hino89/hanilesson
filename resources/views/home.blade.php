@@ -153,10 +153,10 @@
             .materi-cards {
                 width: 60%;
                 flex-direction: row;
-                gap: 2%;
+                gap: 20px;
             }
             .materi-card {
-                width: 38%;
+                width: 100px;
                 font-size: small;
             }
         }
@@ -333,6 +333,12 @@
         window.addEventListener('resize', setFullHeight);
         window.addEventListener('orientationchange', setFullHeight); // Handles orientation change
         setFullHeight(); // Call it initially to set the correct height
+
+        window.addEventListener('load', () => {
+  setTimeout(() => {
+    window.scrollTo(0, 1);
+  }, 0);
+});
 
 
     </script>
