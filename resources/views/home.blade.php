@@ -190,9 +190,9 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 100vh;
+            height: 300vh;
             pointer-events: none;
-            overflow: visible;
+            overflow: hidden;
             z-index: 0;
         }
         .glitter, .sakura {
@@ -325,7 +325,7 @@
 
         // Floating animation function
         function animateFall(el) {
-            const fallDistance = window.innerHeight * 3;
+            const fallDistance = window.innerHeight * 3.2;
             const speed = 150;
             const duration = fallDistance / speed;
 
@@ -333,26 +333,15 @@
             const scale = 0.8 + Math.random() * 1.2;
             el.style.transform = `scale(${scale})`;
 
-            // Fall down animation
+            // Fall down + fade out for both glitter and sakura
             gsap.to(el, {
                 y: fallDistance,
                 x: "+=" + (Math.random() * 40 - 20),
                 rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
+                opacity: 1, // <-- fade out while falling
                 duration: duration,
                 ease: "linear",
-                onComplete: () => {
-                    if (el.classList.contains("glitter") || el.classList.contains("sakura")) {
-                        // Fade out first before removing
-                        gsap.to(el, {
-                            opacity: 0,
-                            duration: 1,
-                            onComplete: () => el.remove()
-                        });
-                    } else {
-                        // Directly remove sakura or other items
-                        el.remove();
-                    }
-                }
+                onComplete: () => el.remove()
             });
 
             // Flutter (horizontal wiggle + rotate wiggle)
@@ -365,18 +354,18 @@
                 ease: 'sine.inOut'
             });
 
-            // Twinkle if glitter
+            // Twinkle effect only for glitter
             if (el.classList.contains("glitter")) {
                 gsap.to(el, {
-                    opacity: 1,
                     scale: 1.3,
-                    duration: 0.5 + Math.random() * 0.5,
                     repeat: -1,
                     yoyo: true,
+                    duration: 0.5 + Math.random() * 0.5,
                     ease: "sine.inOut"
                 });
             }
         }
+
 
 
         let isTabVisible = true;
