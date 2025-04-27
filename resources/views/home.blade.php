@@ -13,7 +13,7 @@
     <style>
         html {
             width: 100vw;
-            height: 300vh;
+            height: 100vh;
             touch-action: none;
             overflow: hidden;
         }
@@ -183,7 +183,6 @@
             }
             html {
                 overflow: hidden;
-                height: calc(var(--vh, 1vh) * 100);
             }
         }
 
