@@ -234,23 +234,24 @@
     </div>
 
     <script>
-        function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    
-    if (section) {
-        gsap.to(window, { 
-            scrollTo: { 
-                y: section, 
-                offsetY: 0 
-            },
-            duration: 1
-        });
-    }
-}
-
-
-
         gsap.registerPlugin(ScrollTrigger);
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            
+            if (section) {
+                gsap.to(window, { 
+                    scrollTo: { 
+                        y: section, 
+                        offsetY: 0 
+                    },
+                    duration: 1
+                });
+            }
+        }
+
+
+
+        
 
         // Floating animation function
         function animateFall(el) {
