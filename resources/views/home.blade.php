@@ -130,6 +130,7 @@
             z-index: 0;
         }
         .glitter, .sakura {
+            overflow: hidden;
             position: absolute;
             top: -50px;
             pointer-events: none;
@@ -181,6 +182,9 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
+            }
+            html, body {
+                overflow: hidden;
             }
         }
 
@@ -293,7 +297,7 @@
             const el = document.createElement("div");
             el.className = type;
             el.style.left = Math.random() * 100 + "vw";
-            el.style.top = "-30px";
+            el.style.top = "-15px";
             document.getElementById("floating-container").appendChild(el);
             animateFall(el);
         }
