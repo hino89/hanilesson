@@ -13,7 +13,7 @@
     <style>
         html {
             width: 100vw;
-            height: 100vh;
+            height: 300vh;
             touch-action: none;
             overflow: hidden;
         }
