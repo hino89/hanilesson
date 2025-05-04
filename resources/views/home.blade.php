@@ -24,7 +24,7 @@
                 width: 100vw;
                 height: 300vh;
                 overflow-x: hidden !important;
-                overflow-y: visible !important;
+                overflow-y: hidden !important;
             }
         }
 
