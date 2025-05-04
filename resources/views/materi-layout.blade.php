@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- GSAP & ScrollToPlugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     
@@ -14,6 +13,7 @@
 
     @include('materi-container')
     @include('materi-flowers')
+    @include('falling-sakura')
     @yield('images')
     <style>
     * {
@@ -190,6 +190,11 @@
 
     document.getElementById('down-button').addEventListener('click', () => {
         scrollToSection(currentSection + 1);
+    });
+
+    let isTabVisible = true;
+    document.addEventListener("visibilitychange", () => {
+        isTabVisible = !document.hidden;
     });
     </script>
     
