@@ -61,7 +61,7 @@
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    height: 20%;
+    height: 100px;
     width: 540px;
     opacity: 0;
     transform: translateY(30px);
