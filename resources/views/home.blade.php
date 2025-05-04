@@ -123,16 +123,6 @@
             margin-bottom: 1rem;
         }
 
-        #floating-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 300vh;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 0;
-        }
         .glitter, .sakura {
             overflow: hidden;
             position: absolute;
@@ -199,10 +189,6 @@
     </style>
 </head>
 <body>
-    <div id="floating-container"></div>
-    <!-- Vertical Menu -->
-    
-
     <div class="section" id="home">
 
         <img class="home-image-3"
