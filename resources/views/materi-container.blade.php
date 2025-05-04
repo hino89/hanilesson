@@ -29,6 +29,7 @@
     align-items: flex-start;
     transition: .6s cubic-bezier(.28,-0.03,0,.99);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
 .card-video {
@@ -110,6 +111,7 @@ input:checked + label .description {
         height: 100%;
         width: 80%;
         flex-direction: column;
+        margin-left: 10%;
     }   
     .card {
         margin: 0;

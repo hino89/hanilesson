@@ -12,13 +12,23 @@
     @include('vertical-menu')
     <style>
         html {
+            margin: 0;
+            padding: 0;
             width: 100vw;
-            height: 100vh;
-            overflow: hidden;
+            height: 300vh;
+            overflow: hidden !important;
+        }
+
+        @media (max-width: 768px) {
+            html {
+                width: 100vw;
+                height: 300vh;
+                overflow-x: hidden !important;
+                overflow-y: visible !important;
+            }
         }
 
         body {
-            background-color: #FCE7C8;
             color: #3E3F5B;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
@@ -183,7 +193,6 @@
 
             }
             .vertical-menu-0 {
-                display: none;
             }
         }
 
@@ -248,11 +257,6 @@
                 });
             }
         }
-
-
-
-
-        
 
         // Floating animation function
         function animateFall(el) {

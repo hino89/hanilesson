@@ -13,6 +13,7 @@
     <title>@yield('title')</title>
 
     @include('materi-container')
+    @include('materi-flowers')
     @yield('images')
     <style>
     * {
@@ -64,9 +65,6 @@
 
     section {
       height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 2rem;
     }
     
@@ -137,15 +135,21 @@
         
     </section>
     <section class="section-1">
-        <div class="wrapper">
-            <div class="container">
+        <div class="flower-1">
+            <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
+        </div>
+        <div class="wrapper" >
+            <div class="container" style="z-index: 10 !important;">
                 @yield('content-1')
             </div>
         </div>
     </section>
     <section class="section-2">
+        <div class="flower-2">
+            <img src="{{ asset('storage/images/morning-glory.png') }}" alt="">
+        </div>
         <div class="wrapper">
-            <div class="container">
+            <div class="container" style="z-index: 10 !important;">
                 @yield('content-2')
             </div>
         </div>
