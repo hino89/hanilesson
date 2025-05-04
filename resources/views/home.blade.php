@@ -171,7 +171,7 @@
 
         @media (max-width: 768px) {
             .section {
-                overflow-x: hidden !important;
+                overflow: hidden !important;
             }
             .materi-buttons {
                 flex-direction: column !important;
