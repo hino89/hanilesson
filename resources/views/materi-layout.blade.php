@@ -148,7 +148,7 @@
     </section>
     <section class="section-2">
         <div class="flower-wrapper">
-            <div class="tentang-flower-1">
+            <div class="materi-flower-1">
                 <img src="{{ asset('storage/images/morning-glory.png') }}" alt="">
             </div>
         </div>

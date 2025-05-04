@@ -34,10 +34,11 @@
         width: 550px;
         max-width: 100vw;
         height: auto;
-        left:  60%;
-        top: 100%;
-        transform: translate(-50%, -100%);
+        left:  75%;
+        top: 80%;
+        transform: translate(-50%, -50%);
         z-index: 0 !important;
+        animation: spin 30s linear infinite;
     }
     
     @media (max-width: 768px) {
