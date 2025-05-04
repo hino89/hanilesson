@@ -152,3 +152,23 @@ input:checked + label .description {
     
 }
 </style>
+
+<script>
+    const videoCards = document.querySelectorAll('.video-card');
+
+    videoCards.forEach(card => {
+    const radio = card.querySelector('input[type="radio"]');
+    const video = card.querySelector('.card-video');
+
+    radio.addEventListener('change', () => {
+        document.querySelectorAll('.card-video').forEach(v => {
+        v.pause();
+            v.currentTime = 0;
+        });
+
+        if (radio.checked) {
+        video.play(); 
+        }
+    });
+    });
+</script>
