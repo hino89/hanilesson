@@ -174,7 +174,6 @@
                 duration: 1,
                 scrollTo: {
                     y: sections[index],
-                    offsetY: 20
                 },
                 onComplete: () => {
                     isScrolling = false;
