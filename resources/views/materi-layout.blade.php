@@ -135,8 +135,10 @@
         
     </section>
     <section class="section-1">
-        <div class="flower-1">
-            <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
+        <div class="flower-wrapper">
+            <div class="tentang-flower-1">
+                <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
+            </div>
         </div>
         <div class="wrapper" >
             <div class="container" style="z-index: 10 !important;">
@@ -145,8 +147,10 @@
         </div>
     </section>
     <section class="section-2">
-        <div class="flower-2">
-            <img src="{{ asset('storage/images/morning-glory.png') }}" alt="">
+        <div class="flower-wrapper">
+            <div class="tentang-flower-1">
+                <img src="{{ asset('storage/images/morning-glory.png') }}" alt="">
+            </div>
         </div>
         <div class="wrapper">
             <div class="container" style="z-index: 10 !important;">
