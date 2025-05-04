@@ -40,6 +40,7 @@
         
 
         .section {
+            overflow-x: hidden !important;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -114,16 +115,6 @@
             margin: 10px auto; /* Center the card */
         }
 
-        .home-text {
-            position: absolute;
-            top: 10%; /* Positioning the text */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white; /* Text color */
-            z-index: 1; /* Ensure text is above the image */
-        }
-
         .section-name {
             font-size: 2rem;
             font-weight: bold;
@@ -176,7 +167,7 @@
 
         @media (max-width: 768px) {
             .section {
-                overflow: hidden;
+                overflow-x: hidden !important;
             }
             .materi-buttons {
                 flex-direction: column !important;
@@ -192,10 +183,6 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
-            }
-            html,body {
-                overflow: visible;
-
             }
             .vertical-menu-0 {
                 display: none;
