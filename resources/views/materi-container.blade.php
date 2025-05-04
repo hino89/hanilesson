@@ -108,7 +108,7 @@ input:checked + label .description {
 
 @media (max-width: 768px) {
     .container {
-        height: 100%;
+        height: auto;
         width: 80%;
         flex-direction: column;
         margin-left: 10%;
