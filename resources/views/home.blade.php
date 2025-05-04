@@ -123,6 +123,15 @@
             margin-bottom: 1rem;
         }
 
+        .falling-stuff-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 300vh;
+            overflow: hidden !important;
+            pointer-events: none;
+        }
         .glitter, .sakura {
             overflow: hidden;
             position: absolute;
@@ -189,6 +198,8 @@
     </style>
 </head>
 <body>
+
+    <div id="falling-stuff-wrapper"></div>
     <div class="section" id="home">
 
         <img class="home-image-3"
@@ -248,10 +259,10 @@
                 });
             }
         }
-        /*
+        
         // Floating animation function
         function animateFall(el) {
-            const fallDistance = window.innerHeight * 3.1;
+            const fallDistance = window.innerHeight * 3;
             const speed = 150;
             const duration = fallDistance / speed;
 
@@ -264,7 +275,7 @@
                 y: fallDistance,
                 x: "+=" + (Math.random() * 40 - 20),
                 rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
-                opacity: 1, // <-- fade out while falling
+                opacity: 0, // <-- fade out while falling
                 duration: duration,
                 ease: "linear",
                 onComplete: () => el.remove()
@@ -292,8 +303,6 @@
             }
         }
 
-
-
         let isTabVisible = true;
         document.addEventListener("visibilitychange", () => {
             isTabVisible = !document.hidden;
@@ -307,10 +316,10 @@
             el.className = type;
             el.style.left = Math.random() * 100 + "vw";
             el.style.top = "-15px";
-            document.getElementById("floating-container").appendChild(el);
+            document.getElementById("falling-stuff-wrapper").appendChild(el);
             animateFall(el);
         }
-        /*
+        
         // Continuous spawn loop
         setInterval(() => {
         spawn("glitter");
@@ -319,24 +328,7 @@
         setInterval(() => {
         spawn("sakura");
         }, 1000); 
-        */
         
-        function setFullHeight() {
-            const vh = window.innerHeight * 0.01; // Get 1% of the actual viewport height
-            document.documentElement.style.setProperty('--vh', `${vh}px`); // Set it as a custom CSS property
-        }
-
-        // Set the full height on load and whenever the window is resized
-        window.addEventListener('resize', setFullHeight);
-        window.addEventListener('orientationchange', setFullHeight); // Handles orientation change
-        setFullHeight(); // Call it initially to set the correct height
-
-        Array.from(document.querySelectorAll('*')).forEach(el => {
-            if (el.scrollWidth > window.innerWidth) {
-                console.log('Overflow:', el);
-            }
-        });
-
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </body>
