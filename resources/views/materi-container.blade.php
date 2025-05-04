@@ -73,6 +73,7 @@
     color: #b0b0ba;
     font-size: medium;
     padding-top: 5px;
+    padding-bottom: 5px;
     
 }
 
@@ -123,5 +124,31 @@ input:checked + label .description {
     input:checked + label {
         width: 100% !important;
     }
+    .card > .row > .icon {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .card > .row > .description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        height: fit-content;
+        width: 100%;
+        word-wrap: break-word;     /* Pecah kata jika kepanjangan */
+        overflow-wrap: break-word; /* Untuk kompatibilitas tambahan */
+        opacity: 0;
+        transform: translateY(30px);
+        transition-delay: .3s;
+        transition: all .3s ease;
+        display: none;
+    }
+
+    input:checked + label .description {
+        display: block !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+    
 }
 </style>
