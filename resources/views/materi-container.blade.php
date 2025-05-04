@@ -154,21 +154,23 @@ input:checked + label .description {
 </style>
 
 <script>
-    const videoCards = document.querySelectorAll('.video-card');
+    const radio = card.querySelectorAll('input[type="radio"]');
 
-    videoCards.forEach(card => {
-    const radio = card.querySelector('input[type="radio"]');
+    radio.forEach(card => {
     const video = card.querySelector('.card-video');
 
     radio.addEventListener('change', () => {
-        document.querySelectorAll('.card-video').forEach(v => {
+      // Pause all videos and optionally reset
+      document.querySelectorAll('.card-video').forEach(v => {
         v.pause();
-            v.currentTime = 0;
-        });
+        // v.currentTime = 0; // Uncomment if you want to reset
+      });
 
-        if (radio.checked) {
-        video.play(); 
-        }
+      // Optional: autoplay the selected one
+      if (radio.checked) {
+        video.play();
+      }
     });
-    });
+  });
+
 </script>
