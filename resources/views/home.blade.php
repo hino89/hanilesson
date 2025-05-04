@@ -265,20 +265,29 @@
             const fallDistance = window.innerHeight * 3;
             const speed = 150;
             const duration = fallDistance / speed;
+            const fadeDuration = 1;
 
             // Random scale (normal to large)
             const scale = 0.8 + Math.random() * 1.2;
             el.style.transform = `scale(${scale})`;
+
+            el.style.opacity = 1;
 
             // Fall down + fade out for both glitter and sakura
             gsap.to(el, {
                 y: fallDistance,
                 x: "+=" + (Math.random() * 40 - 20),
                 rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
-                opacity: 0, // <-- fade out while falling
                 duration: duration,
                 ease: "linear",
                 onComplete: () => el.remove()
+            });
+
+            gsap.to(el, {
+                opacity: 0,
+                delay: duration - fadeDuration,
+                duration: fadeDuration,
+                ease: "sine.out"
             });
 
             // Flutter (horizontal wiggle + rotate wiggle)
