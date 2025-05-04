@@ -26,6 +26,12 @@
                 overflow-x: hidden !important;
                 overflow-y: hidden !important;
             }
+            body {
+                width: 100vw;
+                height: 300vh;
+                overflow-x: hidden !important;
+                overflow-y: hidden !important;
+            }
         }
 
         body {
@@ -193,6 +199,7 @@
 
             }
             .vertical-menu-0 {
+                display: none;
             }
         }
 
