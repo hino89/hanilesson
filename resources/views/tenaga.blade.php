@@ -45,20 +45,44 @@
     .card[for="c10"] {
         background-image: url('./img5.jpeg');
     }
+    .heading-card-wrapper {
+        overflow-x: hidden !important;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+    }
+    .heading-card {
+        background-color: white;
+        color: #3E3F5B;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        text-align: center;
+        width: 800px; /* Adjust width as needed */
+        margin: 10px auto; /* Center the card */
+    }
+    .heading-card p{
+        font-size: medium;
+    }
+    @media (max-width:768px) {
+        .heading-card {
+            width: 70% !important;
+            max-width: 100% !important;
+            box-sizing: border-box;
+        }
+    }
 </style>
 @endsection
 
 @section('content-0')
-<input type="radio" id="c0" checked>
-    <label for="c0" class="card">
-        <div class="row">
-            <div class="icon">0</div>
-            <div class="description">
-                <h4>Tenaga</h4>
-                <p>test</p>
-            </div>
-        </div>
-    </label>
+<div class="heading-card-wrapper">
+    <div class="heading-card" style="z-index: 10">
+        <p>Tenaga dalam seni tari adalah unsur yang berkaitan dengan kualitas dan intensitas gerakan penari. Tenaga menentukan kuat atau lemahnya suatu gerakan, serta memberi ekspresi dan nuansa emosional pada tarian. Penggunaan tenaga bisa bervariasi, mulai dari gerakan yang halus, lembut, dan perlahan hingga gerakan yang kuat, cepat, dan tegas. Tenaga juga mengatur ritme dan dinamika, sehingga tarian tidak monoton dan lebih hidup. Dengan pengolahan tenaga yang tepat, penari dapat menyampaikan karakter, suasana, dan pesan dari sebuah tarian secara lebih mendalam.</p>
+    </div>
+</div>
 @endsection
 
 @section('content-1')

@@ -45,20 +45,44 @@
     .card[for="c10"] {
         background-image: url('./img5.jpeg');
     }
+    .heading-card-wrapper {
+        overflow-x: hidden !important;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+    }
+    .heading-card {
+        background-color: white;
+        color: #3E3F5B;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        text-align: center;
+        width: 800px; /* Adjust width as needed */
+        margin: 10px auto; /* Center the card */
+    }
+    .heading-card p{
+        font-size: medium;
+    }
+    @media (max-width:768px) {
+        .heading-card {
+            width: 70% !important;
+            max-width: 100% !important;
+            box-sizing: border-box;
+        }
+    }
 </style>
 @endsection
 
 @section('content-0')
-<input type="radio" id="c0" checked>
-    <label for="c0" class="card">
-        <div class="row">
-            <div class="icon">0</div>
-            <div class="description">
-                <h4>Ruang</h4>
-                <p>test</p>
-            </div>
-        </div>
-    </label>
+<div class="heading-card-wrapper">
+    <div class="heading-card" style="z-index: 10">
+        <p>Ruang dalam seni tari adalah unsur penting yang mencakup tempat pertunjukan serta cara penari memanfaatkan area sekitarnya. Penari bergerak ke berbagai arah dan level—tinggi, sedang, rendah—dengan jalur yang bisa lurus, melingkar, atau bebas. Jarak antar penari dan penggunaan ruang secara luas atau sempit turut menciptakan dinamika tari. Selain fisik, ruang juga bersifat simbolik, membantu menyampaikan emosi dan makna dalam pertunjukan.</p>
+    </div>
+</div>
 @endsection
 
 @section('content-1')

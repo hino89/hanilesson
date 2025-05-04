@@ -172,7 +172,7 @@
 <body>
 
     
-    <div class="section" id="home">
+    <div class="section" id="home" style="background-color:#FCE7C8">
 
         <img class="home-image-3"
         src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">

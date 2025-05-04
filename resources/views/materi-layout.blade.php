@@ -20,7 +20,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: Arial, Helvetica, sans-serif;t
+        font-family: Arial, Helvetica, sans-serif;
         overflow: hidden;
     }
 
@@ -69,20 +69,20 @@
     }
     
     .section-0 {
-      background-color: #ffffff;
+      background-color: #FCE7C8;
     }
 
     .section-1 {
-      background-color: #ffffff;
+      background-color: #B1C29E;
     }
 
     .section-2 {
-      background-color: #ffffff;
+      background-color: #FADA7A;
     }
 
     .home-text {
         position: absolute;
-        top: 7%; /* Positioning the text */
+        top: 15%; /* Positioning the text */
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -102,7 +102,7 @@
 
     <div class="home-text">
         <div class="background-shape"></div>
-        <h1>@yield('materi-title')</h1>
+        <h1 style="color: #3E3F5B;">@yield('materi-title')</h1>
     </div>
 
 <!-- Vertical Menu -->
@@ -132,7 +132,7 @@
 <!-- Sections -->
 <div class="scroll-container" id="scroll-container">
     <section class="section-0">
-        
+        @yield('content-0')
     </section>
     <section class="section-1">
         <div class="flower-wrapper">
