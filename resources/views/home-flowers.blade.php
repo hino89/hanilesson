@@ -1,4 +1,13 @@
 <style>
+.flower-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 300vh;
+    overflow: hidden !important;
+    pointer-events: none;
+}
 
 .tentang-flower-1 {
     overflow: hidden;
@@ -11,28 +20,28 @@
 .tentang-flower-1 img {
     position: absolute;
     width: 550px;
-    left: 73%;
-    top: 155%;
+    max-width: 100vw;
+    height: auto;
+    left:  75%;
+    top: 50%;
     transform: translate(-50%, -50%);
     z-index: 0 !important;
     animation: spin 30s linear infinite;
-    overflow: hidden;
 }
 
 .materi-flower-1 img {
     position: absolute;
     width: 550px;
-    left: 73%;
-    top: 300%;
+    max-width: 100vw;
+    height: auto;
+    left:  60%;
+    top: 100%;
     transform: translate(-50%, -100%);
     z-index: 0 !important;
-    overflow: hidden;
 }
 
 @media (max-width: 768px) {
-    .tentang-flower-1 {
-        width: 100px;
-    }
+
 }
 
 @keyframes spin {
