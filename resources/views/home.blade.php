@@ -157,13 +157,15 @@
 
         @media (max-width: 768px) {
             .materi-cards {
-                width: 60%;
-                flex-direction: row;
-                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                max-width: 100%;
             }
             .materi-card {
                 width: 100px;
                 font-size: small;
+                max-width: 90%;
             }
         }
 
@@ -175,7 +177,9 @@
                 flex-direction: column !important;
             }
             .tentang-card {
-                width: 60% !important;
+                width: 70% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
             }
             .home-image-3 {
                 width: 80% !important;
@@ -185,6 +189,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
+                max-width: 100%;
             }
             .vertical-menu-0 {
                 display: none;
@@ -252,7 +257,7 @@
                 });
             }
         }
-
+        /*
         // Floating animation function
         function animateFall(el) {
             const fallDistance = window.innerHeight * 3.1;
@@ -334,6 +339,12 @@
         window.addEventListener('resize', setFullHeight);
         window.addEventListener('orientationchange', setFullHeight); // Handles orientation change
         setFullHeight(); // Call it initially to set the correct height
+
+        Array.from(document.querySelectorAll('*')).forEach(el => {
+            if (el.scrollWidth > window.innerWidth) {
+                console.log('Overflow:', el);
+            }
+        });
 
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
