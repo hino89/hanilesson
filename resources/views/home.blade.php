@@ -190,16 +190,13 @@
 </head>
 <body>
     <div class="section" id="home">
-
         <img class="home-image-3"
         src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">
     </div>
     
     <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
         <h1 class="section-name" style="z-index: 10">Tentang</h1>
-        <div class="tentang-flower-1">
-            <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
-        </div>
+        
         <div class="tentang-card" style="z-index: 10">
             <h2>TERUWA</h2>
             <p>Tenaga - Ruang - Waktu <br> Kelas VII</p>
@@ -207,9 +204,7 @@
     </div>
     
     <div class="section" id="materi" style="background-color: #FADA7A;">
-        <div class="materi-flower-1">
-            <img src="{{ asset('storage/images/lavender.png') }}" alt="">
-        </div>
+        
         <h1 class="section-name" style="z-index: 10">Materi</h1>
         <div class="materi-cards" style="z-index: 10">
             <a href="{{ route('tenaga') }}" class="materi-card">
