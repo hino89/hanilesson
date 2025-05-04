@@ -49,6 +49,7 @@
     color: white;
     border-radius: 50%;
     width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +61,7 @@
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    height: 80px;
+    height: 20%;
     width: 540px;
     opacity: 0;
     transform: translateY(30px);
@@ -107,6 +108,9 @@ input:checked + label .description {
 }
 
 @media (max-width: 768px) {
+    .description h4 {
+        margin-top: 5px;
+    }
     .container {
         height: auto;
         width: 80%;

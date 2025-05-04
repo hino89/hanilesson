@@ -54,7 +54,10 @@
                 rotation: "+=" + (Math.random() > 0.5 ? 360 : -360),
                 duration: duration,
                 ease: "linear",
-                onComplete: () => el.remove()
+                onComplete: () => {
+                    gsap.killTweensOf(el); // Matikan semua animasi GSAP terkait elemen ini
+                    el.remove();           // Lalu hapus dari DOM
+                }
             });
 
             gsap.to(el, {
