@@ -123,7 +123,7 @@
             margin-bottom: 1rem;
         }
 
-        .falling-stuff-wrapper {
+        #falling-stuff-wrapper {
             position: absolute;
             top: 0;
             left: 0;
