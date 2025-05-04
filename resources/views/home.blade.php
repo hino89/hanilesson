@@ -16,6 +16,7 @@
             padding: 0;
             width: 100vw;
             overflow: hidden !important;
+            box-sizing: border-box;
         }
         body {
             color: #3E3F5B;
@@ -25,11 +26,12 @@
 
         @media (max-width: 768px) {
             html {
+                width: 100%;
                 overflow-x: hidden !important;
                 overflow-y: visible !important;
             }
             body {
-
+                width: 100%;
                 overflow-x: hidden !important;
                 overflow-y: visible !important;
             }
