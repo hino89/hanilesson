@@ -14,31 +14,28 @@
         html {
             margin: 0;
             padding: 0;
-            width: 100vw;
-            height: 300vh;
+
             overflow: hidden !important;
         }
-
-        @media (max-width: 768px) {
-            html {
-                width: 100vw;
-                height: 300vh;
-                overflow-x: hidden !important;
-                overflow-y: hidden !important;
-            }
-            body {
-                width: 100vw;
-                height: 300vh;
-                overflow-x: hidden !important;
-                overflow-y: hidden !important;
-            }
-        }
-
         body {
             color: #3E3F5B;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
         }
+
+        @media (max-width: 768px) {
+            html {
+                overflow-x: hidden !important;
+                overflow-y: visible !important;
+            }
+            body {
+
+                overflow-x: hidden !important;
+                overflow-y: visible !important;
+            }
+        }
+
+        
 
         .section {
             min-height: 100vh;
