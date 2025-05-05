@@ -192,7 +192,7 @@
     });
 
      // Get all radio inputs and all video elements
-     const radios = document.querySelectorAll('input[name="slide"]');
+    const radios = document.querySelectorAll('input[name="slide"]');
     const videos = document.querySelectorAll('.card-video');
   
     radios.forEach(radio => {
@@ -201,7 +201,7 @@
         videos.forEach(video => {
           video.pause();
           // Optional: reset to beginning
-          // video.currentTime = 0;
+          video.currentTime = 0;
         });
   
         // Find the label associated with the checked radio

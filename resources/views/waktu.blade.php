@@ -89,7 +89,7 @@
 @section('content-1')
 <input type="radio" name="slide" id="c1" checked>
     <label for="c1" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Lambat.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -103,7 +103,7 @@
     </label>
     <input type="radio" name="slide" id="c2" >
     <label for="c2" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Cepat.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -117,7 +117,7 @@
     </label>
     <input type="radio" name="slide" id="c3" >
     <label for="c3" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Cepat.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -131,7 +131,7 @@
     </label>
     <input type="radio" name="slide" id="c4" >
     <label for="c4" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Berhenti.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -145,7 +145,7 @@
     </label>
     <input type="radio" name="slide" id="c5" >
     <label for="c5" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Tertunda.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -162,7 +162,7 @@
 @section('content-2')
 <input type="radio" name="slide" id="c6">
     <label for="c6" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Tiba.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -176,7 +176,7 @@
     </label>
     <input type="radio" name="slide" id="c7" >
     <label for="c7" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Putus.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -190,7 +190,7 @@
     </label>
     <input type="radio" name="slide" id="c8" >
     <label for="c8" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Sederhana.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -204,7 +204,7 @@
     </label>
     <input type="radio" name="slide" id="c9" >
     <label for="c9" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Berirama.mp4') }}" type="video/mp4">
         </video>
         <div class="row">
@@ -218,7 +218,7 @@
     </label>
     <input type="radio" name="slide" id="c10" >
     <label for="c10" class="card">
-        <video controls muted loop playsinline class="card-video">
+        <video controls  loop playsinline class="card-video">
             <source src="{{ asset('storage/videos/Waktu-Improvisasi.mp4') }}" type="video/mp4">
         </video>
         <div class="row">

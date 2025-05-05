@@ -153,8 +153,4 @@ input:checked + label .description {
 }
 </style>
 
-<script>
-   
-
-</script>
   
