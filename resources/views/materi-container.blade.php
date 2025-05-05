@@ -154,6 +154,9 @@ input:checked + label .description {
 </style>
 
 <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // your code here
+
     // Get all radio inputs and all video elements
     const radios = document.querySelectorAll('input[name="slide"]');
     const videos = document.querySelectorAll('.card-video');
@@ -177,5 +180,11 @@ input:checked + label .description {
         }
       });
     });
+
+    radio.addEventListener('change', () => {
+        console.log(`Radio ${radio.id} changed`);
+    });
+
+});
 </script>
   
