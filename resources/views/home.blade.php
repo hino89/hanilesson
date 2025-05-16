@@ -119,7 +119,7 @@
         }
 
         .section-name {
-            font-size: 6rem;
+            font-size: 5rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }
