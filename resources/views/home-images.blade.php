@@ -1,5 +1,5 @@
 <style>
-.flower-wrapper {
+.images-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -29,13 +29,24 @@
     animation: spin 30s linear infinite;
 }
 
-.materi-flower-1 img {
+.materi-image-1 img {
     position: absolute;
-    width: 550px;
+    width: 700px;
     max-width: 100vw;
     height: auto;
-    left:  60%;
+    left:  25%;
     top: 100%;
+    transform: translate(-50%, -100%);
+    z-index: 0 !important;
+}
+
+.tentang-image-1 img {
+    position: absolute;
+    width: 400px;
+    max-width: 100vw;
+    height: auto;
+    left:  80%;
+    top: 68%;
     transform: translate(-50%, -100%);
     z-index: 0 !important;
 }

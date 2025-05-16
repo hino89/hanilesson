@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    @include('home-flowers')
+    @include('home-images')
     @include('vertical-menu')
     @include('falling-sakura')
     <style>
@@ -119,12 +119,10 @@
         }
 
         .section-name {
-            font-size: 2rem;
+            font-size: 6rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }
-
-        
 
         @media (max-width: 768px) {
             .materi-cards {
@@ -167,49 +165,55 @@
             }
         }
 
+        
     </style>
 </head>
 <body>
-
+    <!-- https://colorhunt.co/palette/adb2d4c7d9ddd5e5d5eef1da -->
     
-    <div class="section" id="home" style="background-color:#FCE7C8">
+    <div class="section" id="home" style="background-color:#ADB2D4">
 
         <img class="home-image-3"
         src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">
     </div>
     
-    <div class="section" id="tentang" style="background-color: #B1C29E; color: white;">
-        <h1 class="section-name" style="z-index: 10">Tentang</h1>
-        <div class="flower-wrapper">
-            <div class="tentang-flower-1">
-                <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
+    <div class="section" id="tentang" style="background-color: #C7D9DD; color: white;">
+
+        <div class="images-wrapper">
+            <div class="tentang-image-1">
+                <img src="{{ asset('storage/images/tari-5.png') }}" alt="">
             </div>
         </div>
+
+        <h1 class="section-name" style="z-index: 10;color: #3E3F5B;">TENTANG</h1>
         
         <div class="tentang-card" style="z-index: 10">
             <h2>TERUWA</h2>
             <p>Tenaga - Ruang - Waktu <br> Kelas VII</p>
+            <p style="text-align: justify; margin:2rem;">
+                Tujuan pembelajaran ini adalah agar siswa dapat menjelaskan kembali konsep ruang, waktu, dan tenaga dalam tari, serta memahami keterkaitannya sebagai dasar gerak tari. Siswa diharapkan mampu mengidentifikasi dan menerapkan ketiga elemen tersebut untuk mengekspresikan ide atau emosi dalam tarian secara kreatif dan bermakna.            
+            </p>
         </div>
     </div>
     
-    <div class="section" id="materi" style="background-color: #FADA7A;">
-        <div class="flower-wrapper">
-            <div class="materi-flower-1">
-                <img src="{{ asset('storage/images/lavender.png') }}" alt="">
+    <div class="section" id="materi" style="background-color: #D5E5D5;">
+        <div class="images-wrapper">
+            <div class="materi-image-1">
+                <img src="{{ asset('storage/images/tari-6.png') }}" alt="">
             </div>
         </div>
-        <h1 class="section-name" style="z-index: 10">Materi</h1>
+        <h1 class="section-name" style="z-index: 10;color: #3E3F5B;">MATERI</h1>
         <div class="materi-cards" style="z-index: 10">
             <a href="{{ route('tenaga') }}" class="materi-card">
-                <img src="{{ asset('storage/images/energy-1.jpg') }}" alt="Tenaga" class="materi-image">
+                <img src="{{ asset('storage/images/dance-svg-2.svg') }}" alt="Tenaga" class="materi-image">
                 <h2>Tenaga</h2>
             </a>
             <a href="{{ route('ruang') }}" class="materi-card">
-                <img src="{{ asset('storage/images/space-1.jpg') }}" alt="Ruang" class="materi-image">
+                <img src="{{ asset('storage/images/dance-svg-1.svg') }}" alt="Ruang" class="materi-image">
                 <h2>Ruang</h2>
             </a>
             <a href="{{ route('waktu') }}" class="materi-card">
-                <img src="{{ asset('storage/images/time-1.jpg') }}" alt="Waktu" class="materi-image">
+                <img src="{{ asset('storage/images/dance-svg-3.svg') }}" alt="Waktu" class="materi-image">
                 <h2>Waktu</h2>
             </a>
         </div>
@@ -238,7 +242,9 @@
             isTabVisible = !document.hidden;
         });
 
-       
+       document.querySelectorAll(".section-name").forEach(el => {
+            el.style.textShadow = "5px 5px 0 white";
+        });
         
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>

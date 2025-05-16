@@ -69,15 +69,15 @@
     }
     
     .section-0 {
-      background-color: #FCE7C8;
+      background-color: #ADB2D4;
     }
 
     .section-1 {
-      background-color: #B1C29E;
+      background-color: #C7D9DD;
     }
 
     .section-2 {
-      background-color: #FADA7A;
+      background-color: #D5E5D5;
     }
 
     .home-text {

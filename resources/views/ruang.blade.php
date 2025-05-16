@@ -60,7 +60,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         padding: 30px;
-        text-align: center;
+        text-align: justify;
         width: 800px; /* Adjust width as needed */
         margin: 10px auto; /* Center the card */
     }
