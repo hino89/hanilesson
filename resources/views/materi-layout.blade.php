@@ -13,7 +13,7 @@
 
     @include('materi-container')
     @include('materi-flowers')
-    @include('falling-sakura')
+   <!--  @include('falling-sakura') -->
     @yield('images')
     <style>
     * {
@@ -156,7 +156,7 @@
     <section class="section-2">
         <div class="flower-wrapper">
             <div class="materi-flower-1">
-                <img src="{{ asset('storage/images/morning-glory.png') }}" alt="">
+                <img src="{{ asset(View::getSection('main-materi-image')) }}" alt="">
             </div>
         </div>
         <div class="wrapper">

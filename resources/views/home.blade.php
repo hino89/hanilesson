@@ -10,7 +10,7 @@
 
     @include('home-images')
     @include('vertical-menu')
-    @include('falling-sakura')
+    <!-- @include('falling-sakura') -->
     <style>
         html {
             margin: 0;
