@@ -170,6 +170,30 @@
             }
         }
 
+        .section-continue-text {
+            position: absolute;
+            top: 90%;
+            font-size: 1rem;
+            z-index: 40;
+            color: white;
+            animation: bounceFade 2s infinite;
+        }
+
+        @keyframes bounceFade {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(10px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         
     </style>
 </head>
@@ -187,6 +211,7 @@
         <img class="home-image-3"
         src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">
         -->
+        <h1 class="section-continue-text">geser ke bawah &#x25BC</h1>
     </div>
     
     <div class="section" id="tentang" style="background-color: #C7D9DD; color: white;">
