@@ -2,6 +2,7 @@
 
 @section('title','TERUWA | Tenaga')
 @section('materi-title', 'TENAGA')
+@section('main-materi-image', 'storage/images/move2.png')
 
 @section('images')
 <style>

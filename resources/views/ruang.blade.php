@@ -2,6 +2,7 @@
 
 @section('title','TERUWA | Ruang')
 @section('materi-title', 'RUANG')
+@section('main-materi-image', 'storage/images/ghj.png')
 
 @section('images')
 <style>

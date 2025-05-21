@@ -16,6 +16,17 @@
     .materi-flower-1 {
         overflow: hidden;
     }
+
+    .main-materi-image img {
+        position: absolute;
+        width: 550px;
+        max-width: 100vw;
+        height: auto;
+        left:  50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0 !important;
+    }
     
     .tentang-flower-1 img {
         position: absolute;

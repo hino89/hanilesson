@@ -132,14 +132,21 @@
 <!-- Sections -->
 <div class="scroll-container" id="scroll-container">
     <section class="section-0">
+        <div class="flower-wrapper">
+            <div class="main-materi-image">
+                <img src="{{ asset(View::getSection('main-materi-image')) }}" alt="">
+            </div>
+        </div>
         @yield('content-0')
     </section>
     <section class="section-1">
+        <!--
         <div class="flower-wrapper">
             <div class="tentang-flower-1">
                 <img src="{{ asset('storage/images/blue-flower.png') }}" alt="">
             </div>
         </div>
+        -->
         <div class="wrapper" >
             <div class="container" style="z-index: 10 !important;">
                 @yield('content-1')

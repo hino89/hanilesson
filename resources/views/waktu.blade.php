@@ -2,6 +2,7 @@
 
 @section('title','TERUWA | Waktu')
 @section('materi-title', 'WAKTU')
+@section('main-materi-image', 'storage/images/timeerer.png')
 
 @section('images')
 <style>
