@@ -28,17 +28,6 @@
     z-index: 0 !important;
 }
 
-.tentang-flower-1 img {
-    position: absolute;
-    width: 550px;
-    max-width: 100vw;
-    height: auto;
-    left:  75%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0 !important;
-    animation: spin 30s linear infinite;
-}
 
 .materi-image-1 img {
     position: absolute;
@@ -53,11 +42,11 @@
 
 .tentang-image-1 img {
     position: absolute;
-    width: 400px;
+    width: 700px;
     max-width: 100vw;
     height: auto;
-    left:  80%;
-    top: 68%;
+    left:  70%;
+    top: 66%;
     transform: translate(-50%, -100%);
     z-index: 0 !important;
 }
