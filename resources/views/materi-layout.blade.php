@@ -91,7 +91,7 @@
     }
 
     .home-text h1 {
-        font-size: 40px; /* Larger font size for the main heading */
+        font-size: 5rem; /* Larger font size for the main heading */
         margin: 0;
     }
 
@@ -102,7 +102,7 @@
 
     <div class="home-text">
         <div class="background-shape"></div>
-        <h1 style="color: #3E3F5B;">@yield('materi-title')</h1>
+        <h1 class="big-titles" style="color: #3E3F5B;">@yield('materi-title')</h1>
     </div>
 
 <!-- Vertical Menu -->
@@ -219,6 +219,11 @@
     document.addEventListener("visibilitychange", () => {
         isTabVisible = !document.hidden;
     });
+
+    document.querySelectorAll(".big-titles").forEach(el => {
+            el.style.textShadow = "5px 5px 0 white";
+    });
+
     </script>
     
 </body>

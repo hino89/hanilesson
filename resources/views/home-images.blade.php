@@ -28,7 +28,6 @@
     z-index: 0 !important;
 }
 
-
 .materi-image-1 img {
     position: absolute;
     width: 700px;
@@ -52,7 +51,12 @@
 }
 
 @media (max-width: 768px) {
-
+    .tentang-image-1 img {
+        width: 800px !important;
+    }
+    .materi-image-1 img {
+        width: 800px !important;
+    }
 }
 
 @keyframes spin {
