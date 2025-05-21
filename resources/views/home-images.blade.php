@@ -17,6 +17,17 @@
     overflow: hidden;
 }
 
+.home-image-1 img {
+    position: absolute;
+    width: 300px;
+    max-width: 100vw;
+    height: auto;
+    left:  50%;
+    top: 19%;
+    transform: translate(-50%, -50%);
+    z-index: 0 !important;
+}
+
 .tentang-flower-1 img {
     position: absolute;
     width: 550px;

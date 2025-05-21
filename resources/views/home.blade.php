@@ -171,17 +171,24 @@
 <body>
     <!-- https://colorhunt.co/palette/adb2d4c7d9ddd5e5d5eef1da -->
     
-    <div class="section" id="home" style="background-color:#ADB2D4">
+    <div class="section" id="home" style="background-color:#610832">
 
+         <div class="images-wrapper">
+            <div class="home-image-1">
+                <img src="{{ asset('storage/images/latar-utama.png') }}" alt="">
+            </div>
+        </div>
+        <!-- 
         <img class="home-image-3"
         src="{{ asset('storage/images/move3.png') }}" alt="Background" style="width: 70%; z-index: 10;">
+        -->
     </div>
     
     <div class="section" id="tentang" style="background-color: #C7D9DD; color: white;">
 
         <div class="images-wrapper">
             <div class="tentang-image-1">
-                <img src="{{ asset('storage/images/tari-5.png') }}" alt="">
+                <img src="{{ asset('storage/images/tari-3.png') }}" alt="">
             </div>
         </div>
 
