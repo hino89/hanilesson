@@ -123,6 +123,11 @@
             font-weight: bold;
             margin-bottom: 1rem;
         }
+        .section-name-materi-1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
 
         @media (max-width: 768px) {
             .materi-cards {
@@ -210,6 +215,7 @@
             </div>
         </div>
         <h1 class="section-name" style="z-index: 10;color: #3E3F5B;">MATERI</h1>
+        <h1 class="section-name-materi-1" style="z-index: 10;color: #3E3F5B;">Pilih Salah Satu</h1>
         <div class="materi-cards" style="z-index: 10">
             <a href="{{ route('tenaga') }}" class="materi-card">
                 <img src="{{ asset('storage/images/dance-svg-2.svg') }}" alt="Tenaga" class="materi-image">
@@ -251,6 +257,10 @@
 
        document.querySelectorAll(".section-name").forEach(el => {
             el.style.textShadow = "5px 5px 0 white";
+        });
+
+        document.querySelectorAll(".section-name-materi-1 ").forEach(el => {
+            el.style.textShadow = "2px 2px 0 white";
         });
         
     </script>
