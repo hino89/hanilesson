@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 300vh;
+    height: 500vh;
     overflow: hidden !important;
     pointer-events: none;
 }
@@ -23,7 +23,7 @@
     max-width: 100vw;
     height: auto;
     left:  50%;
-    top: 19%;
+    top: 10%;
     transform: translate(-50%, -50%);
     z-index: 0 !important;
 }
@@ -34,7 +34,7 @@
     max-width: 100vw;
     height: auto;
     left:  25%;
-    top: 100%;
+    top: 60%;
     transform: translate(-50%, -100%);
     z-index: 0 !important;
 }
@@ -45,7 +45,18 @@
     max-width: 100vw;
     height: auto;
     left:  70%;
-    top: 66%;
+    top: 40%;
+    transform: translate(-50%, -100%);
+    z-index: 0 !important;
+}
+
+.evaluasi-image-1 img {
+    position: absolute;
+    width: 550px;
+    max-width: 100vw;
+    height: auto;
+    left:  70%;
+    top: 80%;
     transform: translate(-50%, -100%);
     z-index: 0 !important;
 }

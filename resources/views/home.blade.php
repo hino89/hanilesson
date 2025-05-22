@@ -10,6 +10,7 @@
 
     @include('home-images')
     @include('vertical-menu')
+    @include('home-pengembang')
     <!-- @include('falling-sakura') -->
     <style>
         html {
@@ -177,7 +178,25 @@
             z-index: 40;
             color: white;
             animation: bounceFade 2s infinite;
+            display: none;
         }
+
+        @media (max-width:768px) {
+            .section-continue-text {
+                display: block;
+            }
+        }
+
+        .evaluasi-link {
+            color: #1a73e8;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .evaluasi-link:hover {
+            text-decoration: underline;
+        }
+
 
         @keyframes bounceFade {
             0% {
@@ -255,6 +274,49 @@
                 <h2>Waktu</h2>
             </a>
         </div>
+    </div>
+
+    <div class="section" id="evaluasi" style="background-color: #C7D9DD; color: white;">
+
+        <div class="images-wrapper">
+            <!-- ganti  -->
+            <div class="evaluasi-image-1">
+                <img src="{{ asset('storage/images/tari-4.png') }}" alt="">
+            </div>
+        </div>
+
+        <h1 class="section-name" style="z-index: 10;color: #3E3F5B;">EVALUASI</h1>
+        
+        <div class="tentang-card" style="z-index: 10">
+            <h2>Jawab Soal Berikut</h2>
+            <p style="text-align: justify; margin:2rem;">
+                1. Apa yang dimaksud dengan unsur tenaga dalam tari? <br><br>
+                2. Jelaskan perbedaan antara tenaga kuat dan tenaga lemah dalam gerakan tari! <br><br>
+                3. Apa yang dimaksud dengan ruang dalam konteks tari? <br><br>
+                4. Bagaimana penari memanfaatkan ruang panggung saat menari? <br><br>
+                5. Apa arti unsur waktu dalam tari? <br><br>
+                6. Mengapa penting bagi penari untuk memiliki kesadaran ruang dan waktu saat menari? <br><br>
+                7. Berikan contoh gerakan tari yang menggunakan perpaduan tenaga kuat, ruang luas! <br><br>
+
+                <br>
+
+                Worksheet Google-Form:
+                <a href="https://docs.google.com/forms/d/1zL37-rZWT36PZ8ey1emBJpGB0b8j1R3LLpKo2LrVQIw/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="evaluasi-link">
+                    Buka Form
+                </a>
+
+            </p>
+        </div>
+    </div>
+
+    <div class="section" id="profil" style="background-color: #D5E5D5; color: white;">
+
+        <h1 class="section-name" style="z-index: 10;color: #3E3F5B;">PENGEMBANG</h1>
+        
+        @yield('pengembang-card')
     </div>
 
     <script>
