@@ -94,10 +94,36 @@
             text-decoration: none; /* Remove underline from links */
             color: inherit; /* Inherit text color */
             transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for shadow and transform */
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        /* Floating animasi berbeda untuk tiap card */
+        .materi-card:nth-child(1) {
+            animation-duration: 3s;
+            animation-delay: 0s;
+        }
+
+        .materi-card:nth-child(2) {
+            animation-duration: 4s;
+            animation-delay: 0.5s;
+        }
+
+        .materi-card:nth-child(3) {
+            animation-duration: 5s;
+            animation-delay: 1s;
         }
         
 
         .materi-card:hover {
+            animation-play-state: paused;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
             transform: scale(1.05) rotate(2deg); /* Scale and rotate effect */
         }
