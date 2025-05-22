@@ -314,7 +314,7 @@
 
     <div class="section" id="profil" style="background-color: #D5E5D5; color: white;">
 
-        <h1 class="section-name" style="z-index: 10;color: #3E3F5B;">PENGEMBANG</h1>
+        <h1 class="section-name" style="z-index: 10;color: #3E3F5B;font-size:3rem;">PENGEMBANG</h1>
         
         @yield('pengembang-card')
     </div>

@@ -23,10 +23,16 @@
   border: 1px solid #000;
   border-radius: 10px;
   padding: 0.75rem;
-  width: 200px;
+  width: 300px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #f9f9f9;
+}
+
+@media(max-width:768px) {
+    .developer-card {
+        width: 150px;
+    }
 }
 
 .developer-card img {
