@@ -11,6 +11,7 @@
     @include('home-images')
     @include('vertical-menu')
     @include('home-pengembang')
+    @include('petunjuk-penggunaan')
     <!-- @include('falling-sakura') -->
     <style>
         html {
@@ -182,16 +183,6 @@
                 max-width: 100% !important;
                 box-sizing: border-box;
             }
-            .home-image-3 {
-                width: 80% !important;
-                height: auto;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: -1;
-                max-width: 100%;
-            }
             .vertical-menu-0 {
                 display: none;
             }
@@ -244,6 +235,13 @@
 </head>
 <body>
     <!-- https://colorhunt.co/palette/adb2d4c7d9ddd5e5d5eef1da -->
+
+    <div class="section" id="petunjuk" style="background-color:#610832">
+
+        <h1 class="section-name" style="z-index: 10;color: #fde997;font-size:5rem;">PETUNJUK</h1>
+
+        @yield('petunjuk-card')
+    </div>
     
     <div class="section" id="home" style="background-color:#610832">
 

@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 500vh;
+    height: 600vh;
     overflow: hidden !important;
     pointer-events: none;
 }
@@ -23,7 +23,18 @@
     max-width: 100vw;
     height: auto;
     left:  50%;
-    top: 10%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 0 !important;
+}
+
+.petunjuk-image-1 img {
+    position: absolute;
+    width: 300px;
+    max-width: 100vw;
+    height: auto;
+    left:  50%;
+    top: 8%;
     transform: translate(-50%, -50%);
     z-index: 0 !important;
 }
@@ -34,7 +45,7 @@
     max-width: 100vw;
     height: auto;
     left:  25%;
-    top: 60%;
+    top: 66.6%;
     transform: translate(-50%, -100%);
     z-index: 0 !important;
 }
@@ -45,7 +56,7 @@
     max-width: 100vw;
     height: auto;
     left:  70%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -100%);
     z-index: 0 !important;
 }
@@ -56,7 +67,7 @@
     max-width: 100vw;
     height: auto;
     left:  70%;
-    top: 80%;
+    top: 83.3%;
     transform: translate(-50%, -100%);
     z-index: 0 !important;
 }

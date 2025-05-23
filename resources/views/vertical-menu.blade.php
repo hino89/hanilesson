@@ -1,5 +1,16 @@
 <div class="vertical-menu-0" style="z-index: 10">
     <!-- Back Button (Home Icon) -->
+
+    <button class="icon-button" onclick="scrollToSection('petunjuk')" aria-label="Back to Home">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+    <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 
+             10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm1.07-7.75
+             c-.9.92-1.07 1.24-1.07 2.25h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26
+             c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 
+             1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+  </svg>
+    </button>
+
     <button class="icon-button" onclick="scrollToSection('home')" aria-label="Back to Home">
         <svg viewBox="0 0 24 24">
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
